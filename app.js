@@ -121,8 +121,14 @@ class Favourites {
     addProductToFavourites(product) {
         if(this.items.includes(product)) {
             Modal.displayAddedToModal('Item deleted from Favourites');
-            
-        } else {
+            const productIdx = this.items.findIndex(p => p.id == product.id);
+            let singleItem = this.items.splice(productIdx, 1);
+            [singleItem] = [...singleItem];
+            const singleProduct = document.getElementById(`${singleItem.id}`);
+            singleProduct.remove();
+            this.hideEmptyFavourites();
+        } 
+        else {
             this.items.push(product);
             console.log(this.items);
             this.renderFavouriteItems();
