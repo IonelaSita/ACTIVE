@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, user-scalable=yes"
+    />
+    <link rel="stylesheet" href="styles/style-main.css" />
+    <script src="app.js" defer></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;500&display=swap"
+      rel="stylesheet"
+    />
+    <title>Active</title>
+    <link rel="shortcut icon" href="images/logo.svg" />
+  </head>
+  <body>
+    <header>
+<!--       <template id="cart-item-template">
+        <div class="single-item-in-cart">
+          <img class="item-image-in-cart" src="" alt="">
+          <div class="title-price-in-cart">
+          <p class="item-name-in-cart"></p>
+          <p class="item-price-in-cart"></p>
+          </div>
+          </div>
+      </template> -->
+
+      <template id="favourite-item-template">
+        <div class="single-item-in-favourite">
+          <div class="image-title-price"></div>
+          <img class="item-image-in-favourite" src="" alt="">
+          <div class="title-price-in-favourite">
+          <p class="item-name-in-favourite"></p>
+          <p class="item-price-in-favourite"></p>
+          </div>
+          </div>
+          <button><img class="delete-button" src="images/delete.svg"></button>
+          <button><img class="add-to-cart-button" src="images/cart.svg"></button>
+          </div>
+      </template>
+
+      <div id="nav-bar">
+        <a href="main.html" id="home-page-btn"
+          ><img src="images/logo.svg" alt="ACTIVE logo"
+        /></a>
+        <div id="menu-container">
+          <ul id="categories">
+            <li id="women" class="categorie"><button>WOMEN</button></li>
+            <li id="men" class="categorie"><button>MEN</button></li>
+            <li id="accessories" class="categorie">
+              <button>ACCESSORIES</button>
+            </li>
+          </ul>
+          <ul id="menu">
+            <li id="search" class="menu-item">
+              <a href=""><img src="images/search.svg" alt="search icon" /></a>
+            </li>
+            <li id="favourites" class="menu-item">
+              <button id="favourites-btn"><img src="images/favourites.svg" alt="favourites icon"
+                /></button>
+            </li>
+            <li id="profile" class="menu-item">
+              <a href=""><img src="images/profile.svg" alt="profile icon" /></a>
+            </li>
+            <li id="cart" class="menu-item">
+              <button id="cart-btn"><img src="images/cart.svg" alt="cart icon"
+              /></button>
+              <div id="cart-counter-circle" class="hidden"></div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </header>
+
+    <div id="cart-modal" class="hidden"></div>
+    <div id="shopping-cart-container" class="hidden">
+      <div id="cart-prod-list"><h2>My shopping cart</h2><div id="empty-shopping-cart-div"><img class="empty-list" src="images/shopping-cart.gif" alt="Empty shopping cart"><h3>Your shopping cart is empty</h3></div></div>
+      <div id="total-order"></div>
+    </div>
+
+    <div id="favourites-modal" class="hidden"></div>
+    <div id="favourites-container" class="hidden">
+      <div id="favourites-prod-list"><h2>My favourite items</h2><div id="empty-favourites-div"><img class="empty-list" src="images/favourites-animation.gif" alt="Empty favourites list"><h3>Your favourites list is empty</h3></div></div>
+    </div>
+
+    <div id="modal-added-to-div">
+      <div id="modal-added-to" class="hidden">
+        <h3></h3>
+      </div>
+    </div>
+
+
+    <section id="above-the-fold">
+      <img
+        src="images/above-the-fold-image.png"
+        alt="lady on a blue background"
+      />
+      <div id="above-the-fold-title"></div>
+      <a href="about.html" id="discover-more">Discover more</a>
+    </section>
+
+    <section id="new-collection" class="collections">
+      <div id="polygon-3" class="polygon">
+        <img src="images/polygon-3.svg" alt="" />
+      </div>
+      <h1 class="section-title">NEW COLLECTION</h1>
+      <!--   <ul class="item-cards">
+            <button><img class="arrow-left" src="images/arrow-left.png" alt="arrow left"></button>
+            <li class="item-card" id="item-card-1">
+                <button>                
+                    <img class="item-image" src="images/new-collection-item-1.png" alt="Women’s Fleece">
+                    <p class="item-name">Women’s Fleece</p>
+                    <p class="item-price">$160</p>
+                </button>
+            </li>
+            <li class="item-card" id="item-card-2">
+                <button>
+                    <img class="item-image" src="images/new-collection-item-2.png" alt="Women Gentle-Support Leggins">
+                    <p class="item-name">Women Gentle-Support Leggins</p>
+                    <p class="item-price">$130</p>
+                </button>
+            </li>
+            <li class="item-card" id="item-card-3">
+                <button>                
+                    <img class="item-image" src="images/new-collection-item-3.png" alt="Men’s T-shirt">
+                    <p class="item-name">Men’s T-shirt</p>
+                    <p class="item-price">$80</p>
+                </button>
+            </li> 
+            <button><img class="arrow-right" src="images/arrow-right.png" alt="arrow right"></button> 
+        </ul> -->
+    </section>
+
+    <section id="new-arrivals" class="collections">
+      <div id="polygon-4" class="polygon">
+        <img src="images/polygon-4.svg" alt="" />
+      </div>
+      <h1 class="section-title">NEW ARRIVALS</h1>
+      <!--         <ul class="item-cards">
+            <button><img class="arrow-left" src="images/arrow-left.png" alt="arrow left"></button>
+            <li class="item-card">
+                <button>
+                    <img class="item-image" src="images/new-arrivals-item-1.png" alt="Men’s Training Top">
+                    <p class="item-name">Men’s Training Top</p>
+                    <p class="item-price">$120</p>
+                </button>
+            </li>
+            <li class="item-card">
+                <button>
+                    <img class="item-image" src="images/new-arrivals-item-2.png" alt="Women Tank Top">
+                    <p class="item-name">Women Tank Top</p>
+                    <p class="item-price">$60</p>
+                </button>
+            </li>
+            <li class="item-card">
+                <button>
+                    <img class="item-image" src="images/new-arrivals-item-3.png" alt="Women’s Trousers">
+                    <p class="item-name">Women’s Trousers</p>
+                    <p class="item-price">$150</p>
+                </button>
+            </li>
+            <button><img class="arrow-right" src="images/arrow-right.png" alt="arrow right"></button>
+        </ul> -->
+    </section>
+
+    <section id="reviews">
+      <div id="polygon-5" class="polygon">
+        <img src="images/polygon-5.svg" alt="" />
+      </div>
+      <h1 class="section-title">REVIEWS</h1>
+      <ul id="review-cards">
+        <li class="review-card">
+          <div>
+            <img src="images/customer-1.png" alt="customer photo" />
+            <h3 class="review-name">Tony Pugh</h3>
+          </div>
+          <p class="review-comment">Very good quality. Really recommend!</p>
+        </li>
+        <li class="review-card">
+          <div>
+            <img src="images/customer-2.png" alt="customer photo" />
+            <h3 class="review-name">Alice Stevens</h3>
+          </div>
+          <p class="review-comment">
+            I am very happy with my purchase. Customer service is really good.
+          </p>
+        </li>
+        <li class="review-card">
+          <div>
+            <img src="images/customer-3.png" alt="customer photo" />
+            <h3 class="review-name">Chris Bennett</h3>
+          </div>
+          <p class="review-comment">Best online shop for gym clothes!</p>
+        </li>
+      </ul>
+    </section>
+
+    <section id="contact">
+      <h1 class="section-title">GET IN CONTACT</h1>
+      <div>
+        <div id="email">
+          <div id="line"></div>
+          <div>
+            <h3>E-mail</h3>
+            <div id="btn-in">
+              <input type="text" placeholder="i.e. john_smith@gmail.com" />
+              <button><img src="images/small-arrow-right.svg" alt="" /></button>
+            </div>
+          </div>
+        </div>
+        <ul class="social-media">
+          <li id="facebook">
+            <button>
+              <img src="images/facebook-icon.svg" alt="facebook icon" />
+            </button>
+          </li>
+          <li id="instagram">
+            <button>
+              <img src="images/instagram-icon.svg" alt="instagram icon" />
+            </button>
+          </li>
+          <li id="twitter">
+            <button>
+              <img src="images/twitter-icon.svg" alt="twitter icon" />
+            </button>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <footer>
+      <div id="footer">
+        <img src="images/logo.svg" alt="ACTIVE logo" />
+        <ul id="footer-menu">
+          <li>
+            <button>About Us</button>
+          </li>
+          <li>
+            <button>Shipping & Delivery</button>
+          </li>
+          <li>
+            <button>Returns</button>
+          </li>
+          <li>
+            <button>Contact Us</button>
+          </li>
+        </ul>
+      </div>
+      <p>© ACTIVE 2023. All Rights Reserved</p>
+    </footer>
+  </body>
+</html>
