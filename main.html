@@ -8,6 +8,8 @@
       content="width=device-width, initial-scale=1.0, user-scalable=yes"
     />
     <link rel="stylesheet" href="styles/style-main.css" />
+    <link rel="stylesheet" href="styles/style-about.css" />
+    <link rel="stylesheet" href="styles/style-women.css" />
     <script src="app.js" defer></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -55,8 +57,8 @@
         /></a>
         <div id="menu-container">
           <ul id="categories">
-            <li id="women" class="categorie"><button>WOMEN</button></li>
-            <li id="men" class="categorie"><button>MEN</button></li>
+            <li id="women" class="categorie"><button id="women-button">WOMEN</button></li>
+            <li id="men" class="categorie"><button id="men-button">MEN</button></li>
             <li id="accessories" class="categorie">
               <button>ACCESSORIES</button>
             </li>
@@ -82,6 +84,8 @@
       </div>
     </header>
 
+    <div id="page-wrapping-div">
+
     <div id="cart-modal" class="hidden"></div>
     <div id="shopping-cart-container" class="hidden">
       <div id="cart-prod-list"><h2>My shopping cart</h2><div id="empty-shopping-cart-div"><img class="empty-list" src="images/shopping-cart.gif" alt="Empty shopping cart"><h3>Your shopping cart is empty</h3></div></div>
@@ -106,7 +110,7 @@
         alt="lady on a blue background"
       />
       <div id="above-the-fold-title"></div>
-      <a href="about.html" id="discover-more">Discover more</a>
+      <button id="discover-more-button">Discover more</button>
     </section>
 
     <section id="new-collection" class="collections">
@@ -204,6 +208,8 @@
         </li>
       </ul>
     </section>
+
+  </div>
 
     <section id="contact">
       <h1 class="section-title">GET IN CONTACT</h1>

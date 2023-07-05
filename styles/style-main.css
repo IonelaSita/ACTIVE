@@ -196,7 +196,7 @@ header #nav-bar #menu-container #menu .menu-item #cart-counter-circle {
   height: auto;
 }
 
-#discover-more {
+#discover-more-button {
   z-index: 1;
   display: flex;
   flex-direction: row;

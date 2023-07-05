@@ -127,10 +127,8 @@ class Favourites {
             const singleProduct = document.getElementById(`${singleItem.id}`);
             singleProduct.remove();
             this.hideEmptyFavourites();
-        } 
-        else {
+        } else {
             this.items.push(product);
-            console.log(this.items);
             this.renderFavouriteItems();
             Modal.displayAddedToModal('Item added to ❤️');
         }
@@ -153,11 +151,8 @@ class Favourites {
     }
 
     deleteProduct(product) {
-        //console.log(product);
         const productIdx = this.items.findIndex(p => p.id == product.id);
         let singleProduct = this.items.splice(productIdx, 1);
-        //console.log(singleProduct);
-        //console.log(this.items);
         [singleProduct] = [...singleProduct];
         product.remove();
         this.hideEmptyFavourites();
@@ -171,13 +166,12 @@ class Favourites {
         cartButton.addEventListener('click', this.moveItemToCart.bind(this, product));;
     }
 
-    moveItemToCart(product) {
-        //this.changeHeartColourToWhite();
-        const singleProduct = this.deleteProduct(product);
+    moveItemToCart(productDiv) {
+        const singleItem = this.deleteProduct(productDiv);
+        
         //const cart = new ShoppingCart();
         //cart.addProduct(singleProduct);
-        this.testFn(singleProduct);
-        console.log(singleProduct);
+        this.testFn(singleItem);
     }
 
     //Change heart colour when you add/remove items from Favourites
@@ -225,6 +219,7 @@ class ShoppingCart extends ProductList{
     sum = 0;
 
     addProduct(product) {
+        console.log(this.items);
         this.items.push(product);
         console.log(this.items);
         this.renderCartItems();
@@ -351,12 +346,55 @@ class Shop {
     }
 }
 
+class Women {
+    /* render() {
+        const prodList = document.querySelector('#women-new-collection ul');
+        console.log(prodList);
+        prodList.className = 'item-cards';
+        for (const prod of this.productsNewCollection) {
+            const productItem = new ProductItem(prod);
+            const prodEl = productItem.render();
+            prodList.append(prodEl);
+        }
+        return prodList;
+    } */
+}
+
+class FetchPages {
+    constructor() {
+        this.renderPage('discover-more', 'http://127.0.0.1:5500/about.html');
+        this.renderPage('women', 'http://127.0.0.1:5500/women.html');
+        this.renderPage('men', 'http://127.0.0.1:5500/men.html');
+    }
+
+    renderPage(categorie, api) {
+        const categorieButton = document.getElementById(`${categorie}-button`);
+        categorieButton.addEventListener('click', this.fetchPage.bind(this, api));
+    }
+
+    fetchPage(api) {
+        const wrappingDiv = document.getElementById('page-wrapping-div');
+        const apiURL = api;
+
+        fetch(apiURL)
+        .then(response => {
+            return response.text();
+        })
+        .then(data => {
+            wrappingDiv.innerHTML = data;
+        })
+    }
+}
+
 class App {
     static init() {
         const shop = new Shop();
         shop.render();
         this.cart = shop.cart;
         this.favourites = shop.favourites;
+        new FetchPages();
+        //const womenProductList = new Women();
+        //womenProductList.render();
     }
 
     static addProductToCart(product) {
@@ -365,7 +403,6 @@ class App {
 
     static addProductToFavourites(product) {
         this.favourites.addProductToFavourites(product);
-        //this.favourites.changeHeartColourToRed(product);
     }
 }
 
