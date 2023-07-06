@@ -1,0 +1,23 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+body {
+  background: #FFFFFF;
+}
+
+#women-main, #men-main {
+  padding: 0vw 5vw 5vw 5vw;
+}
+#women-main #women-header-img, #women-main #men-header-img, #men-main #women-header-img, #men-main #men-header-img {
+  width: 100%;
+  height: auto;
+  padding: 3vw 0vw;
+}
+
+.collection {
+  padding: 5vw;
+}/*# sourceMappingURL=style-women-men.css.map */

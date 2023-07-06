@@ -217,6 +217,7 @@ header #nav-bar #menu-container #menu .menu-item #cart-counter-circle {
   font-size: 4vw;
   font-weight: 400;
   padding-bottom: 4vw;
+  color: rgba(39, 35, 35, 0.63);
 }
 
 .arrow-left,
@@ -238,7 +239,8 @@ header #nav-bar #menu-container #menu .menu-item #cart-counter-circle {
 .item-cards .item-card {
   padding: 0.5vw;
   list-style: none;
-  width: 100%;
+  width: -moz-min-content;
+  width: min-content;
 }
 .item-cards .item-card div {
   display: inline-flex;
@@ -257,9 +259,6 @@ header #nav-bar #menu-container #menu .menu-item #cart-counter-circle {
 .item-cards .item-card div .add-to-cart-btn {
   padding: 0 3px;
 }
-.item-cards .item-card div .add-to-favourites-btn {
-  margin-right: 6px;
-}
 
 .collections {
   margin-bottom: 6vw;
@@ -272,6 +271,9 @@ header #nav-bar #menu-container #menu .menu-item #cart-counter-circle {
   color: #ffffff;
   padding-top: 4vw;
   margin-top: 10vw;
+}
+#reviews .section-title {
+  color: #ffffff;
 }
 #reviews #review-cards {
   list-style: none;

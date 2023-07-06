@@ -248,6 +248,7 @@ display: none;
   font-size: 4vw;
   font-weight: 400;
   padding-bottom: 4vw;
+  color: $primaryFont;
 }
 
 .arrow-left,
@@ -269,7 +270,7 @@ display: none;
   .item-card {
     padding: 0.5vw;
     list-style: none;
-    width: 100%;
+    width:min-content;
 
     div {
       display: inline-flex;
@@ -289,10 +290,6 @@ display: none;
       .add-to-cart-btn {
         padding: 0 3px;
       }
-
-      .add-to-favourites-btn {
-        margin-right: 6px;
-      }
     }
 
   }
@@ -309,6 +306,10 @@ display: none;
   color: #ffffff;
   padding-top: 4vw;
   margin-top: 10vw;
+
+  .section-title {
+    color: #ffffff;
+  }
 
   #review-cards {
     list-style: none;

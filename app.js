@@ -282,7 +282,6 @@ class ShoppingCart extends ProductList{
         `;
         cart.className = 'cart';
         this.totalOutput = cart.querySelector('h2');
-        console.log(this.totalOutput);
         const totalOrderSection = document.getElementById('total-order');
         totalOrderSection.append(cart);
     }
@@ -329,6 +328,54 @@ class ShoppingCart extends ProductList{
     } 
 }
 
+class Women extends ProductList {    
+    render() {
+        const prodListCollection = document.querySelector('#women-new-collection ul');
+        prodListCollection.className = 'item-cards';
+        for (const prod of this.productsNewCollection) {
+            if(prod.categorie === 'women') {
+                const productItem = new ProductItem(prod);
+                const prodEl = productItem.render();
+                prodListCollection.append(prodEl);
+            }
+        }
+
+        const prodListArrivals = document.querySelector('#women-new-arrivals ul');
+        prodListArrivals.className = 'item-cards';
+        for (const prod of this.productsNewArrivals) {
+            if(prod.categorie === 'women') {
+                const productItem = new ProductItem(prod);
+                const prodEl = productItem.render();
+                prodListArrivals.append(prodEl);
+            }
+        }
+    }
+}
+
+class Men extends ProductList {    
+    render() {
+        const prodListCollection = document.querySelector('#men-new-collection ul');
+        prodListCollection.className = 'item-cards';
+        for (const prod of this.productsNewCollection) {
+            if(prod.categorie === 'men') {
+                const productItem = new ProductItem(prod);
+                const prodEl = productItem.render();
+                prodListCollection.append(prodEl);
+            }
+        }
+
+        const prodListArrivals = document.querySelector('#men-new-arrivals ul');
+        prodListArrivals.className = 'item-cards';
+        for (const prod of this.productsNewArrivals) {
+            if(prod.categorie === 'men') {
+                const productItem = new ProductItem(prod);
+                const prodEl = productItem.render();
+                prodListArrivals.append(prodEl);
+            }
+        }
+    }
+}
+
 class Shop {
     render() {
         const renderHookNewCollection = document.getElementById('new-collection');
@@ -338,6 +385,8 @@ class Shop {
         this.cart.render();
         this.favourites = new Favourites(this.cart.addProduct);
         const productList = new ProductList();
+        //const womenProductList = new Women();
+        //womenProductList.render();
         const prodListElNewCollection = productList.renderNewCollection();
         const prodListElNewArrivals = productList.renderNewArrivals();
 
@@ -346,33 +395,19 @@ class Shop {
     }
 }
 
-class Women {
-    /* render() {
-        const prodList = document.querySelector('#women-new-collection ul');
-        console.log(prodList);
-        prodList.className = 'item-cards';
-        for (const prod of this.productsNewCollection) {
-            const productItem = new ProductItem(prod);
-            const prodEl = productItem.render();
-            prodList.append(prodEl);
-        }
-        return prodList;
-    } */
-}
-
 class FetchPages {
     constructor() {
         this.renderPage('discover-more', 'http://127.0.0.1:5500/about.html');
-        this.renderPage('women', 'http://127.0.0.1:5500/women.html');
-        this.renderPage('men', 'http://127.0.0.1:5500/men.html');
+        this.renderPage('women', 'http://127.0.0.1:5500/women.html', new Women());
+        this.renderPage('men', 'http://127.0.0.1:5500/men.html', new Men());
     }
 
-    renderPage(categorie, api) {
+    renderPage(categorie, api, categorieClass) {
         const categorieButton = document.getElementById(`${categorie}-button`);
-        categorieButton.addEventListener('click', this.fetchPage.bind(this, api));
+        categorieButton.addEventListener('click', this.fetchPage.bind(this, api, categorieClass));
     }
 
-    fetchPage(api) {
+    fetchPage(api, categorie) {
         const wrappingDiv = document.getElementById('page-wrapping-div');
         const apiURL = api;
 
@@ -382,7 +417,10 @@ class FetchPages {
         })
         .then(data => {
             wrappingDiv.innerHTML = data;
-        })
+        }).then(() => {
+            const categorieClass = categorie;
+            categorieClass.render();
+        });
     }
 }
 
@@ -393,8 +431,6 @@ class App {
         this.cart = shop.cart;
         this.favourites = shop.favourites;
         new FetchPages();
-        //const womenProductList = new Women();
-        //womenProductList.render();
     }
 
     static addProductToCart(product) {
