@@ -114,8 +114,8 @@ class ProductList {
 class Favourites {
     items = [];
 
-    constructor(testFn) {
-        this.testFn = testFn;
+    constructor(cart) {
+        this.cart = cart;
     }
 
     addProductToFavourites(product) {
@@ -171,7 +171,7 @@ class Favourites {
         
         //const cart = new ShoppingCart();
         //cart.addProduct(singleProduct);
-        this.testFn(singleItem);
+        this.cart.addProduct(singleItem);
     }
 
     //Change heart colour when you add/remove items from Favourites
@@ -383,7 +383,7 @@ class Shop {
 
         this.cart = new ShoppingCart();
         this.cart.render();
-        this.favourites = new Favourites(this.cart.addProduct);
+        this.favourites = new Favourites(this.cart);
         const productList = new ProductList();
         //const womenProductList = new Women();
         //womenProductList.render();
