@@ -59,7 +59,8 @@ header #nav-bar #menu-container #menu .menu-item {
   list-style: none;
   text-align: center;
 }
-header #nav-bar #menu-container #menu .menu-item a img, header #nav-bar #menu-container #menu .menu-item button img {
+header #nav-bar #menu-container #menu .menu-item a img,
+header #nav-bar #menu-container #menu .menu-item button img {
   max-width: 60%;
   height: auto;
   vertical-align: middle;
@@ -76,7 +77,8 @@ header #nav-bar #menu-container #menu .menu-item #cart-counter-circle {
   z-index: 5;
 }
 
-#cart-modal, #favourites-modal {
+#cart-modal,
+#favourites-modal {
   z-index: 3;
   position: fixed;
   background-color: rgba(128, 128, 128, 0.559);
@@ -109,7 +111,8 @@ header #nav-bar #menu-container #menu .menu-item #cart-counter-circle {
   display: none;
 }
 
-#shopping-cart-container, #favourites-container {
+#shopping-cart-container,
+#favourites-container {
   z-index: 4;
   background-color: #ffffff;
   position: fixed;
@@ -117,22 +120,30 @@ header #nav-bar #menu-container #menu .menu-item #cart-counter-circle {
   width: 70%;
   height: 80%;
 }
-#shopping-cart-container .empty-list, #favourites-container .empty-list {
+#shopping-cart-container .empty-list,
+#favourites-container .empty-list {
   width: 30%;
   margin: 15% 35% 15% 35%;
 }
-#shopping-cart-container h3, #favourites-container h3 {
+#shopping-cart-container h3,
+#favourites-container h3 {
   text-align: center;
   margin-bottom: 15vw;
   color: rgba(39, 35, 35, 0.63);
   font-weight: 400;
   font-size: 3.5vw;
 }
-#shopping-cart-container #cart-prod-list, #shopping-cart-container #favourites-prod-list, #favourites-container #cart-prod-list, #favourites-container #favourites-prod-list {
+#shopping-cart-container #cart-prod-list,
+#shopping-cart-container #favourites-prod-list,
+#favourites-container #cart-prod-list,
+#favourites-container #favourites-prod-list {
   padding: 5vw;
   margin-left: 3vw;
 }
-#shopping-cart-container #cart-prod-list h2, #shopping-cart-container #favourites-prod-list h2, #favourites-container #cart-prod-list h2, #favourites-container #favourites-prod-list h2 {
+#shopping-cart-container #cart-prod-list h2,
+#shopping-cart-container #favourites-prod-list h2,
+#favourites-container #cart-prod-list h2,
+#favourites-container #favourites-prod-list h2 {
   color: rgba(39, 35, 35, 0.63);
   font-weight: 400;
   font-size: 4vw;
@@ -140,32 +151,139 @@ header #nav-bar #menu-container #menu .menu-item #cart-counter-circle {
   text-align: center;
   padding-bottom: 7vw;
 }
-#shopping-cart-container #cart-prod-list .single-item-in-cart, #shopping-cart-container #cart-prod-list .single-item-in-favourites, #shopping-cart-container #favourites-prod-list .single-item-in-cart, #shopping-cart-container #favourites-prod-list .single-item-in-favourites, #favourites-container #cart-prod-list .single-item-in-cart, #favourites-container #cart-prod-list .single-item-in-favourites, #favourites-container #favourites-prod-list .single-item-in-cart, #favourites-container #favourites-prod-list .single-item-in-favourites {
+#shopping-cart-container #cart-prod-list .single-item-in-cart,
+#shopping-cart-container #cart-prod-list .single-item-in-favourites,
+#shopping-cart-container #favourites-prod-list .single-item-in-cart,
+#shopping-cart-container #favourites-prod-list .single-item-in-favourites,
+#favourites-container #cart-prod-list .single-item-in-cart,
+#favourites-container #cart-prod-list .single-item-in-favourites,
+#favourites-container #favourites-prod-list .single-item-in-cart,
+#favourites-container #favourites-prod-list .single-item-in-favourites {
   display: flex;
   margin: 2vw 0;
   justify-content: space-between;
 }
-#shopping-cart-container #cart-prod-list .single-item-in-cart .image-title-price, #shopping-cart-container #cart-prod-list .single-item-in-favourites .image-title-price, #shopping-cart-container #favourites-prod-list .single-item-in-cart .image-title-price, #shopping-cart-container #favourites-prod-list .single-item-in-favourites .image-title-price, #favourites-container #cart-prod-list .single-item-in-cart .image-title-price, #favourites-container #cart-prod-list .single-item-in-favourites .image-title-price, #favourites-container #favourites-prod-list .single-item-in-cart .image-title-price, #favourites-container #favourites-prod-list .single-item-in-favourites .image-title-price {
+#shopping-cart-container #cart-prod-list .single-item-in-cart .image-title-price,
+#shopping-cart-container #cart-prod-list .single-item-in-favourites .image-title-price,
+#shopping-cart-container #favourites-prod-list .single-item-in-cart .image-title-price,
+#shopping-cart-container #favourites-prod-list .single-item-in-favourites .image-title-price,
+#favourites-container #cart-prod-list .single-item-in-cart .image-title-price,
+#favourites-container #cart-prod-list .single-item-in-favourites .image-title-price,
+#favourites-container #favourites-prod-list .single-item-in-cart .image-title-price,
+#favourites-container #favourites-prod-list .single-item-in-favourites .image-title-price {
   display: inline-flex;
 }
-#shopping-cart-container #cart-prod-list .single-item-in-cart .image-title-price .item-image-in-cart, #shopping-cart-container #cart-prod-list .single-item-in-cart .image-title-price .item-image-in-favourites, #shopping-cart-container #cart-prod-list .single-item-in-favourites .image-title-price .item-image-in-cart, #shopping-cart-container #cart-prod-list .single-item-in-favourites .image-title-price .item-image-in-favourites, #shopping-cart-container #favourites-prod-list .single-item-in-cart .image-title-price .item-image-in-cart, #shopping-cart-container #favourites-prod-list .single-item-in-cart .image-title-price .item-image-in-favourites, #shopping-cart-container #favourites-prod-list .single-item-in-favourites .image-title-price .item-image-in-cart, #shopping-cart-container #favourites-prod-list .single-item-in-favourites .image-title-price .item-image-in-favourites, #favourites-container #cart-prod-list .single-item-in-cart .image-title-price .item-image-in-cart, #favourites-container #cart-prod-list .single-item-in-cart .image-title-price .item-image-in-favourites, #favourites-container #cart-prod-list .single-item-in-favourites .image-title-price .item-image-in-cart, #favourites-container #cart-prod-list .single-item-in-favourites .image-title-price .item-image-in-favourites, #favourites-container #favourites-prod-list .single-item-in-cart .image-title-price .item-image-in-cart, #favourites-container #favourites-prod-list .single-item-in-cart .image-title-price .item-image-in-favourites, #favourites-container #favourites-prod-list .single-item-in-favourites .image-title-price .item-image-in-cart, #favourites-container #favourites-prod-list .single-item-in-favourites .image-title-price .item-image-in-favourites {
+#shopping-cart-container #cart-prod-list .single-item-in-cart .image-title-price .item-image-in-cart,
+#shopping-cart-container #cart-prod-list .single-item-in-cart .image-title-price .item-image-in-favourites,
+#shopping-cart-container #cart-prod-list .single-item-in-favourites .image-title-price .item-image-in-cart,
+#shopping-cart-container #cart-prod-list .single-item-in-favourites .image-title-price .item-image-in-favourites,
+#shopping-cart-container #favourites-prod-list .single-item-in-cart .image-title-price .item-image-in-cart,
+#shopping-cart-container #favourites-prod-list .single-item-in-cart .image-title-price .item-image-in-favourites,
+#shopping-cart-container #favourites-prod-list .single-item-in-favourites .image-title-price .item-image-in-cart,
+#shopping-cart-container #favourites-prod-list .single-item-in-favourites .image-title-price .item-image-in-favourites,
+#favourites-container #cart-prod-list .single-item-in-cart .image-title-price .item-image-in-cart,
+#favourites-container #cart-prod-list .single-item-in-cart .image-title-price .item-image-in-favourites,
+#favourites-container #cart-prod-list .single-item-in-favourites .image-title-price .item-image-in-cart,
+#favourites-container #cart-prod-list .single-item-in-favourites .image-title-price .item-image-in-favourites,
+#favourites-container #favourites-prod-list .single-item-in-cart .image-title-price .item-image-in-cart,
+#favourites-container #favourites-prod-list .single-item-in-cart .image-title-price .item-image-in-favourites,
+#favourites-container #favourites-prod-list .single-item-in-favourites .image-title-price .item-image-in-cart,
+#favourites-container #favourites-prod-list .single-item-in-favourites .image-title-price .item-image-in-favourites {
   width: 12vw;
   filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.2));
 }
-#shopping-cart-container #cart-prod-list .single-item-in-cart .image-title-price .title-price-in-cart, #shopping-cart-container #cart-prod-list .single-item-in-cart .image-title-price .title-price-in-favourites, #shopping-cart-container #cart-prod-list .single-item-in-favourites .image-title-price .title-price-in-cart, #shopping-cart-container #cart-prod-list .single-item-in-favourites .image-title-price .title-price-in-favourites, #shopping-cart-container #favourites-prod-list .single-item-in-cart .image-title-price .title-price-in-cart, #shopping-cart-container #favourites-prod-list .single-item-in-cart .image-title-price .title-price-in-favourites, #shopping-cart-container #favourites-prod-list .single-item-in-favourites .image-title-price .title-price-in-cart, #shopping-cart-container #favourites-prod-list .single-item-in-favourites .image-title-price .title-price-in-favourites, #favourites-container #cart-prod-list .single-item-in-cart .image-title-price .title-price-in-cart, #favourites-container #cart-prod-list .single-item-in-cart .image-title-price .title-price-in-favourites, #favourites-container #cart-prod-list .single-item-in-favourites .image-title-price .title-price-in-cart, #favourites-container #cart-prod-list .single-item-in-favourites .image-title-price .title-price-in-favourites, #favourites-container #favourites-prod-list .single-item-in-cart .image-title-price .title-price-in-cart, #favourites-container #favourites-prod-list .single-item-in-cart .image-title-price .title-price-in-favourites, #favourites-container #favourites-prod-list .single-item-in-favourites .image-title-price .title-price-in-cart, #favourites-container #favourites-prod-list .single-item-in-favourites .image-title-price .title-price-in-favourites {
+#shopping-cart-container #cart-prod-list .single-item-in-cart .image-title-price .title-price-in-cart,
+#shopping-cart-container #cart-prod-list .single-item-in-cart .image-title-price .title-price-in-favourites,
+#shopping-cart-container #cart-prod-list .single-item-in-favourites .image-title-price .title-price-in-cart,
+#shopping-cart-container #cart-prod-list .single-item-in-favourites .image-title-price .title-price-in-favourites,
+#shopping-cart-container #favourites-prod-list .single-item-in-cart .image-title-price .title-price-in-cart,
+#shopping-cart-container #favourites-prod-list .single-item-in-cart .image-title-price .title-price-in-favourites,
+#shopping-cart-container #favourites-prod-list .single-item-in-favourites .image-title-price .title-price-in-cart,
+#shopping-cart-container #favourites-prod-list .single-item-in-favourites .image-title-price .title-price-in-favourites,
+#favourites-container #cart-prod-list .single-item-in-cart .image-title-price .title-price-in-cart,
+#favourites-container #cart-prod-list .single-item-in-cart .image-title-price .title-price-in-favourites,
+#favourites-container #cart-prod-list .single-item-in-favourites .image-title-price .title-price-in-cart,
+#favourites-container #cart-prod-list .single-item-in-favourites .image-title-price .title-price-in-favourites,
+#favourites-container #favourites-prod-list .single-item-in-cart .image-title-price .title-price-in-cart,
+#favourites-container #favourites-prod-list .single-item-in-cart .image-title-price .title-price-in-favourites,
+#favourites-container #favourites-prod-list .single-item-in-favourites .image-title-price .title-price-in-cart,
+#favourites-container #favourites-prod-list .single-item-in-favourites .image-title-price .title-price-in-favourites {
   padding: 4vw;
   margin: auto;
 }
-#shopping-cart-container #cart-prod-list .single-item-in-cart .image-title-price .title-price-in-cart .item-name-in-cart, #shopping-cart-container #cart-prod-list .single-item-in-cart .image-title-price .title-price-in-cart .item-name-in-favourites, #shopping-cart-container #cart-prod-list .single-item-in-cart .image-title-price .title-price-in-favourites .item-name-in-cart, #shopping-cart-container #cart-prod-list .single-item-in-cart .image-title-price .title-price-in-favourites .item-name-in-favourites, #shopping-cart-container #cart-prod-list .single-item-in-favourites .image-title-price .title-price-in-cart .item-name-in-cart, #shopping-cart-container #cart-prod-list .single-item-in-favourites .image-title-price .title-price-in-cart .item-name-in-favourites, #shopping-cart-container #cart-prod-list .single-item-in-favourites .image-title-price .title-price-in-favourites .item-name-in-cart, #shopping-cart-container #cart-prod-list .single-item-in-favourites .image-title-price .title-price-in-favourites .item-name-in-favourites, #shopping-cart-container #favourites-prod-list .single-item-in-cart .image-title-price .title-price-in-cart .item-name-in-cart, #shopping-cart-container #favourites-prod-list .single-item-in-cart .image-title-price .title-price-in-cart .item-name-in-favourites, #shopping-cart-container #favourites-prod-list .single-item-in-cart .image-title-price .title-price-in-favourites .item-name-in-cart, #shopping-cart-container #favourites-prod-list .single-item-in-cart .image-title-price .title-price-in-favourites .item-name-in-favourites, #shopping-cart-container #favourites-prod-list .single-item-in-favourites .image-title-price .title-price-in-cart .item-name-in-cart, #shopping-cart-container #favourites-prod-list .single-item-in-favourites .image-title-price .title-price-in-cart .item-name-in-favourites, #shopping-cart-container #favourites-prod-list .single-item-in-favourites .image-title-price .title-price-in-favourites .item-name-in-cart, #shopping-cart-container #favourites-prod-list .single-item-in-favourites .image-title-price .title-price-in-favourites .item-name-in-favourites, #favourites-container #cart-prod-list .single-item-in-cart .image-title-price .title-price-in-cart .item-name-in-cart, #favourites-container #cart-prod-list .single-item-in-cart .image-title-price .title-price-in-cart .item-name-in-favourites, #favourites-container #cart-prod-list .single-item-in-cart .image-title-price .title-price-in-favourites .item-name-in-cart, #favourites-container #cart-prod-list .single-item-in-cart .image-title-price .title-price-in-favourites .item-name-in-favourites, #favourites-container #cart-prod-list .single-item-in-favourites .image-title-price .title-price-in-cart .item-name-in-cart, #favourites-container #cart-prod-list .single-item-in-favourites .image-title-price .title-price-in-cart .item-name-in-favourites, #favourites-container #cart-prod-list .single-item-in-favourites .image-title-price .title-price-in-favourites .item-name-in-cart, #favourites-container #cart-prod-list .single-item-in-favourites .image-title-price .title-price-in-favourites .item-name-in-favourites, #favourites-container #favourites-prod-list .single-item-in-cart .image-title-price .title-price-in-cart .item-name-in-cart, #favourites-container #favourites-prod-list .single-item-in-cart .image-title-price .title-price-in-cart .item-name-in-favourites, #favourites-container #favourites-prod-list .single-item-in-cart .image-title-price .title-price-in-favourites .item-name-in-cart, #favourites-container #favourites-prod-list .single-item-in-cart .image-title-price .title-price-in-favourites .item-name-in-favourites, #favourites-container #favourites-prod-list .single-item-in-favourites .image-title-price .title-price-in-cart .item-name-in-cart, #favourites-container #favourites-prod-list .single-item-in-favourites .image-title-price .title-price-in-cart .item-name-in-favourites, #favourites-container #favourites-prod-list .single-item-in-favourites .image-title-price .title-price-in-favourites .item-name-in-cart, #favourites-container #favourites-prod-list .single-item-in-favourites .image-title-price .title-price-in-favourites .item-name-in-favourites {
+#shopping-cart-container #cart-prod-list .single-item-in-cart .image-title-price .title-price-in-cart .item-name-in-cart,
+#shopping-cart-container #cart-prod-list .single-item-in-cart .image-title-price .title-price-in-cart .item-name-in-favourites,
+#shopping-cart-container #cart-prod-list .single-item-in-cart .image-title-price .title-price-in-favourites .item-name-in-cart,
+#shopping-cart-container #cart-prod-list .single-item-in-cart .image-title-price .title-price-in-favourites .item-name-in-favourites,
+#shopping-cart-container #cart-prod-list .single-item-in-favourites .image-title-price .title-price-in-cart .item-name-in-cart,
+#shopping-cart-container #cart-prod-list .single-item-in-favourites .image-title-price .title-price-in-cart .item-name-in-favourites,
+#shopping-cart-container #cart-prod-list .single-item-in-favourites .image-title-price .title-price-in-favourites .item-name-in-cart,
+#shopping-cart-container #cart-prod-list .single-item-in-favourites .image-title-price .title-price-in-favourites .item-name-in-favourites,
+#shopping-cart-container #favourites-prod-list .single-item-in-cart .image-title-price .title-price-in-cart .item-name-in-cart,
+#shopping-cart-container #favourites-prod-list .single-item-in-cart .image-title-price .title-price-in-cart .item-name-in-favourites,
+#shopping-cart-container #favourites-prod-list .single-item-in-cart .image-title-price .title-price-in-favourites .item-name-in-cart,
+#shopping-cart-container #favourites-prod-list .single-item-in-cart .image-title-price .title-price-in-favourites .item-name-in-favourites,
+#shopping-cart-container #favourites-prod-list .single-item-in-favourites .image-title-price .title-price-in-cart .item-name-in-cart,
+#shopping-cart-container #favourites-prod-list .single-item-in-favourites .image-title-price .title-price-in-cart .item-name-in-favourites,
+#shopping-cart-container #favourites-prod-list .single-item-in-favourites .image-title-price .title-price-in-favourites .item-name-in-cart,
+#shopping-cart-container #favourites-prod-list .single-item-in-favourites .image-title-price .title-price-in-favourites .item-name-in-favourites,
+#favourites-container #cart-prod-list .single-item-in-cart .image-title-price .title-price-in-cart .item-name-in-cart,
+#favourites-container #cart-prod-list .single-item-in-cart .image-title-price .title-price-in-cart .item-name-in-favourites,
+#favourites-container #cart-prod-list .single-item-in-cart .image-title-price .title-price-in-favourites .item-name-in-cart,
+#favourites-container #cart-prod-list .single-item-in-cart .image-title-price .title-price-in-favourites .item-name-in-favourites,
+#favourites-container #cart-prod-list .single-item-in-favourites .image-title-price .title-price-in-cart .item-name-in-cart,
+#favourites-container #cart-prod-list .single-item-in-favourites .image-title-price .title-price-in-cart .item-name-in-favourites,
+#favourites-container #cart-prod-list .single-item-in-favourites .image-title-price .title-price-in-favourites .item-name-in-cart,
+#favourites-container #cart-prod-list .single-item-in-favourites .image-title-price .title-price-in-favourites .item-name-in-favourites,
+#favourites-container #favourites-prod-list .single-item-in-cart .image-title-price .title-price-in-cart .item-name-in-cart,
+#favourites-container #favourites-prod-list .single-item-in-cart .image-title-price .title-price-in-cart .item-name-in-favourites,
+#favourites-container #favourites-prod-list .single-item-in-cart .image-title-price .title-price-in-favourites .item-name-in-cart,
+#favourites-container #favourites-prod-list .single-item-in-cart .image-title-price .title-price-in-favourites .item-name-in-favourites,
+#favourites-container #favourites-prod-list .single-item-in-favourites .image-title-price .title-price-in-cart .item-name-in-cart,
+#favourites-container #favourites-prod-list .single-item-in-favourites .image-title-price .title-price-in-cart .item-name-in-favourites,
+#favourites-container #favourites-prod-list .single-item-in-favourites .image-title-price .title-price-in-favourites .item-name-in-cart,
+#favourites-container #favourites-prod-list .single-item-in-favourites .image-title-price .title-price-in-favourites .item-name-in-favourites {
   font-size: 1.8vw;
   color: rgba(39, 35, 35, 0.63);
 }
-#shopping-cart-container #cart-prod-list .single-item-in-cart .image-title-price .title-price-in-cart .item-price-in-cart, #shopping-cart-container #cart-prod-list .single-item-in-cart .image-title-price .title-price-in-cart .item-price-in-favourites, #shopping-cart-container #cart-prod-list .single-item-in-cart .image-title-price .title-price-in-favourites .item-price-in-cart, #shopping-cart-container #cart-prod-list .single-item-in-cart .image-title-price .title-price-in-favourites .item-price-in-favourites, #shopping-cart-container #cart-prod-list .single-item-in-favourites .image-title-price .title-price-in-cart .item-price-in-cart, #shopping-cart-container #cart-prod-list .single-item-in-favourites .image-title-price .title-price-in-cart .item-price-in-favourites, #shopping-cart-container #cart-prod-list .single-item-in-favourites .image-title-price .title-price-in-favourites .item-price-in-cart, #shopping-cart-container #cart-prod-list .single-item-in-favourites .image-title-price .title-price-in-favourites .item-price-in-favourites, #shopping-cart-container #favourites-prod-list .single-item-in-cart .image-title-price .title-price-in-cart .item-price-in-cart, #shopping-cart-container #favourites-prod-list .single-item-in-cart .image-title-price .title-price-in-cart .item-price-in-favourites, #shopping-cart-container #favourites-prod-list .single-item-in-cart .image-title-price .title-price-in-favourites .item-price-in-cart, #shopping-cart-container #favourites-prod-list .single-item-in-cart .image-title-price .title-price-in-favourites .item-price-in-favourites, #shopping-cart-container #favourites-prod-list .single-item-in-favourites .image-title-price .title-price-in-cart .item-price-in-cart, #shopping-cart-container #favourites-prod-list .single-item-in-favourites .image-title-price .title-price-in-cart .item-price-in-favourites, #shopping-cart-container #favourites-prod-list .single-item-in-favourites .image-title-price .title-price-in-favourites .item-price-in-cart, #shopping-cart-container #favourites-prod-list .single-item-in-favourites .image-title-price .title-price-in-favourites .item-price-in-favourites, #favourites-container #cart-prod-list .single-item-in-cart .image-title-price .title-price-in-cart .item-price-in-cart, #favourites-container #cart-prod-list .single-item-in-cart .image-title-price .title-price-in-cart .item-price-in-favourites, #favourites-container #cart-prod-list .single-item-in-cart .image-title-price .title-price-in-favourites .item-price-in-cart, #favourites-container #cart-prod-list .single-item-in-cart .image-title-price .title-price-in-favourites .item-price-in-favourites, #favourites-container #cart-prod-list .single-item-in-favourites .image-title-price .title-price-in-cart .item-price-in-cart, #favourites-container #cart-prod-list .single-item-in-favourites .image-title-price .title-price-in-cart .item-price-in-favourites, #favourites-container #cart-prod-list .single-item-in-favourites .image-title-price .title-price-in-favourites .item-price-in-cart, #favourites-container #cart-prod-list .single-item-in-favourites .image-title-price .title-price-in-favourites .item-price-in-favourites, #favourites-container #favourites-prod-list .single-item-in-cart .image-title-price .title-price-in-cart .item-price-in-cart, #favourites-container #favourites-prod-list .single-item-in-cart .image-title-price .title-price-in-cart .item-price-in-favourites, #favourites-container #favourites-prod-list .single-item-in-cart .image-title-price .title-price-in-favourites .item-price-in-cart, #favourites-container #favourites-prod-list .single-item-in-cart .image-title-price .title-price-in-favourites .item-price-in-favourites, #favourites-container #favourites-prod-list .single-item-in-favourites .image-title-price .title-price-in-cart .item-price-in-cart, #favourites-container #favourites-prod-list .single-item-in-favourites .image-title-price .title-price-in-cart .item-price-in-favourites, #favourites-container #favourites-prod-list .single-item-in-favourites .image-title-price .title-price-in-favourites .item-price-in-cart, #favourites-container #favourites-prod-list .single-item-in-favourites .image-title-price .title-price-in-favourites .item-price-in-favourites {
+#shopping-cart-container #cart-prod-list .single-item-in-cart .image-title-price .title-price-in-cart .item-price-in-cart,
+#shopping-cart-container #cart-prod-list .single-item-in-cart .image-title-price .title-price-in-cart .item-price-in-favourites,
+#shopping-cart-container #cart-prod-list .single-item-in-cart .image-title-price .title-price-in-favourites .item-price-in-cart,
+#shopping-cart-container #cart-prod-list .single-item-in-cart .image-title-price .title-price-in-favourites .item-price-in-favourites,
+#shopping-cart-container #cart-prod-list .single-item-in-favourites .image-title-price .title-price-in-cart .item-price-in-cart,
+#shopping-cart-container #cart-prod-list .single-item-in-favourites .image-title-price .title-price-in-cart .item-price-in-favourites,
+#shopping-cart-container #cart-prod-list .single-item-in-favourites .image-title-price .title-price-in-favourites .item-price-in-cart,
+#shopping-cart-container #cart-prod-list .single-item-in-favourites .image-title-price .title-price-in-favourites .item-price-in-favourites,
+#shopping-cart-container #favourites-prod-list .single-item-in-cart .image-title-price .title-price-in-cart .item-price-in-cart,
+#shopping-cart-container #favourites-prod-list .single-item-in-cart .image-title-price .title-price-in-cart .item-price-in-favourites,
+#shopping-cart-container #favourites-prod-list .single-item-in-cart .image-title-price .title-price-in-favourites .item-price-in-cart,
+#shopping-cart-container #favourites-prod-list .single-item-in-cart .image-title-price .title-price-in-favourites .item-price-in-favourites,
+#shopping-cart-container #favourites-prod-list .single-item-in-favourites .image-title-price .title-price-in-cart .item-price-in-cart,
+#shopping-cart-container #favourites-prod-list .single-item-in-favourites .image-title-price .title-price-in-cart .item-price-in-favourites,
+#shopping-cart-container #favourites-prod-list .single-item-in-favourites .image-title-price .title-price-in-favourites .item-price-in-cart,
+#shopping-cart-container #favourites-prod-list .single-item-in-favourites .image-title-price .title-price-in-favourites .item-price-in-favourites,
+#favourites-container #cart-prod-list .single-item-in-cart .image-title-price .title-price-in-cart .item-price-in-cart,
+#favourites-container #cart-prod-list .single-item-in-cart .image-title-price .title-price-in-cart .item-price-in-favourites,
+#favourites-container #cart-prod-list .single-item-in-cart .image-title-price .title-price-in-favourites .item-price-in-cart,
+#favourites-container #cart-prod-list .single-item-in-cart .image-title-price .title-price-in-favourites .item-price-in-favourites,
+#favourites-container #cart-prod-list .single-item-in-favourites .image-title-price .title-price-in-cart .item-price-in-cart,
+#favourites-container #cart-prod-list .single-item-in-favourites .image-title-price .title-price-in-cart .item-price-in-favourites,
+#favourites-container #cart-prod-list .single-item-in-favourites .image-title-price .title-price-in-favourites .item-price-in-cart,
+#favourites-container #cart-prod-list .single-item-in-favourites .image-title-price .title-price-in-favourites .item-price-in-favourites,
+#favourites-container #favourites-prod-list .single-item-in-cart .image-title-price .title-price-in-cart .item-price-in-cart,
+#favourites-container #favourites-prod-list .single-item-in-cart .image-title-price .title-price-in-cart .item-price-in-favourites,
+#favourites-container #favourites-prod-list .single-item-in-cart .image-title-price .title-price-in-favourites .item-price-in-cart,
+#favourites-container #favourites-prod-list .single-item-in-cart .image-title-price .title-price-in-favourites .item-price-in-favourites,
+#favourites-container #favourites-prod-list .single-item-in-favourites .image-title-price .title-price-in-cart .item-price-in-cart,
+#favourites-container #favourites-prod-list .single-item-in-favourites .image-title-price .title-price-in-cart .item-price-in-favourites,
+#favourites-container #favourites-prod-list .single-item-in-favourites .image-title-price .title-price-in-favourites .item-price-in-cart,
+#favourites-container #favourites-prod-list .single-item-in-favourites .image-title-price .title-price-in-favourites .item-price-in-favourites {
   font-size: 2vw;
   color: rgba(39, 35, 35, 0.63);
   font-weight: bold;
 }
-#shopping-cart-container h2, #favourites-container h2 {
+#shopping-cart-container h2,
+#favourites-container h2 {
   text-align: end;
   font-size: 4vw;
   font-weight: 400;
@@ -456,4 +574,19 @@ footer p {
   100% {
     transform: translateZ(0%) rotate(-20deg);
   }
+}
+/* Accessories page style */
+#page-under-construction {
+  height: 25vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(98, 116, 136);
+}
+#page-under-construction h1 {
+  color: #ffffff;
+  font-weight: 300;
+}
+#page-under-construction img {
+  padding: 5px;
 }/*# sourceMappingURL=style-main.css.map */

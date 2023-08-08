@@ -400,6 +400,7 @@ class FetchPages {
         this.renderPage('discover-more', 'http://127.0.0.1:5500/about.html');
         this.renderPage('women', 'http://127.0.0.1:5500/women.html', new Women());
         this.renderPage('men', 'http://127.0.0.1:5500/men.html', new Men());
+        this.renderPage('accessories', 'http://127.0.0.1:5500/accessories.html');
     }
 
     renderPage(categorie, api, categorieClass) {
