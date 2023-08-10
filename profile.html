@@ -1,0 +1,62 @@
+<head></head>
+<section id="profile-section">
+  <div>
+    <img src="images/logo.svg" alt="logo" />
+    <h1>My ACTIVE account</h1>
+    <div>
+      <button id="log-in-button" class="selected">LOG IN</button>
+      <button id="sign-up-button">SIGN UP</button>
+    </div>
+    <div id="line"></div>
+
+    <template id="log-in-template">
+      <div id="log-in-div" class="account">
+        <br />
+        <p>Email Address</p>
+        <input type="text" placeholder="Enter email address" />
+        <br />
+        <p>Password</p>
+        <input type="text" placeholder="Enter password" />
+        <br />
+        <button class="submit-button" type="submit">LOG IN</button>
+        <br />
+        <button><u>Forgot Password?</u></button>
+      </div>
+    </template>
+
+    <template id="sign-up-template">
+      <div id="sign-up-div" class="account" class="hidden">
+        <br />
+        <p>Email Address</p>
+        <input type="text" placeholder="Enter email address" />
+        <br />
+        <p>Password</p>
+        <input type="text" placeholder="Enter password" />
+        <br />
+        <p>First name</p>
+        <input type="text" placeholder="Enter first name" />
+        <br />
+        <p>Last name</p>
+        <input type="text" placeholder="Enter last name" />
+        <br />
+        <div id="checkbox">
+          <input type="checkbox" name="marketing" />
+          <label for="marketing"
+            >Tick here if you want to get marketing emails from ACTIVE</label
+          >
+        </div>
+        <p>
+          Get emails you'll actually read, with new products, sale alerts,
+          events, exclusive content, and more.
+        </p>
+        <br />
+        <p>
+          Want to know more about how and why ACTIVE uses your personal
+          information? Read our <button><u>Privacy Notice</u></button>.
+        </p>
+        <br />
+        <button class="submit-button" type="submit">CREATE ACCOUNT</button>
+      </div>
+    </template>
+  </div>
+</section>

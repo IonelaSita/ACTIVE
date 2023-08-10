@@ -1,0 +1,113 @@
+$blueBackground: rgba(98, 116, 136, 1);
+$primaryFont: rgba(39, 35, 35, 0.63);
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+#profile-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  div {
+    width: 60%;
+    height: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    img {
+      padding: 10px;
+    }
+
+    h1 {
+      padding: 1vh 0 5vh 0;
+      font-weight: 500;
+      font-size: 3.5vw;
+      color: $primaryFont;
+    }
+
+    div {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      flex-direction: row;
+      margin: 0;
+
+      button {
+        padding: 10px 18px;
+        font-size: 1.8vh;
+        font-weight: 400;
+        width: 50%;
+        color: $primaryFont;
+      }
+
+      .selected {
+        background-color: $blueBackground;
+        color: #ffffff;
+      }
+    }
+  }
+
+  #line {
+    width: 100%;
+    height: 1px;
+    margin-bottom: 2vh;
+    background-color: $blueBackground;
+  }
+}
+
+.account {
+  width: 60%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+
+  p,
+  input {
+    padding: 1vh;
+    color: $primaryFont;
+    text-align: justify;
+  }
+
+  p {
+    font-weight: 500;
+  }
+
+  input {
+    border: solid 1px $primaryFont;
+    border-radius: 0;
+  }
+
+  input:hover,
+  input:focus {
+    outline-color: $blueBackground;
+    border: 2px solid $blueBackground;
+    border-radius: 0;
+  }
+
+  #checkbox {
+    padding: 1vh;
+    text-align: justify;
+    color: $primaryFont;
+  }
+
+  .submit-button {
+    background-color: $blueBackground;
+    color: #ffffff;
+    margin-top: 3vh;
+    padding: 10px;
+    font-size: 1.8vh;
+    font-weight: 400;
+  }
+}
+
+.hidden {
+  display: none;
+}

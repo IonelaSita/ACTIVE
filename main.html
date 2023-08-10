@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="styles/style-main.css" />
     <link rel="stylesheet" href="styles/style-about.css" />
     <link rel="stylesheet" href="styles/style-women-men.css" />
+    <link rel="stylesheet" href="styles/style-profile.css">
     <script src="app.js" defer></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -37,20 +38,6 @@
           </div>
       </template> -->
 
-      <template id="favourite-item-template">
-        <div class="single-item-in-favourite">
-          <div class="image-title-price"></div>
-          <img class="item-image-in-favourite" src="" alt="">
-          <div class="title-price-in-favourite">
-          <p class="item-name-in-favourite"></p>
-          <p class="item-price-in-favourite"></p>
-          </div>
-          </div>
-          <button><img class="delete-button" src="images/delete.svg"></button>
-          <button><img class="add-to-cart-button" src="images/cart.svg"></button>
-          </div>
-      </template>
-
       <div id="nav-bar">
         <a href="main.html" id="home-page-btn"
           ><img src="images/logo.svg" alt="ACTIVE logo"
@@ -70,7 +57,7 @@
                 /></button>
             </li>
             <li id="profile" class="menu-item">
-              <a href=""><img src="images/profile.svg" alt="profile icon" /></a>
+              <button id="profile-button"><img src="images/profile.svg" alt="profile icon" /></button></a>
             </li>
             <li id="cart" class="menu-item">
               <button id="cart-btn"><img src="images/cart.svg" alt="cart icon"
