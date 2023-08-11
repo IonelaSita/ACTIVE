@@ -106,46 +106,22 @@ class ProductList {
   renderNewCollection() {
     const prodList = document.createElement("ul");
     prodList.className = "item-cards";
-    const arrowLeft = document.createElement("button");
-    const imgArrowLeft = document.createElement("img");
-    imgArrowLeft.src = "images/arrow-left.png";
-    imgArrowLeft.className = "arrow-left";
-    arrowLeft.append(imgArrowLeft);
-    prodList.append(arrowLeft);
     for (const prod of this.productsNewCollection) {
       const productItem = new ProductItem(prod);
       const prodEl = productItem.render();
       prodList.append(prodEl);
     }
-    const arrowRight = document.createElement("button");
-    const imgArrowRight = document.createElement("img");
-    imgArrowRight.src = "images/arrow-right.png";
-    imgArrowRight.className = "arrow-right";
-    arrowRight.append(imgArrowRight);
-    prodList.append(arrowRight);
     return prodList;
   }
 
   renderNewArrivals() {
     const prodList = document.createElement("ul");
     prodList.className = "item-cards";
-    const arrowLeft = document.createElement("button");
-    const imgArrowLeft = document.createElement("img");
-    imgArrowLeft.src = "images/arrow-left.png";
-    imgArrowLeft.className = "arrow-left";
-    arrowLeft.append(imgArrowLeft);
-    prodList.append(arrowLeft);
     for (const prod of this.productsNewArrivals) {
       const productItem = new ProductItem(prod);
       const prodEl = productItem.render();
       prodList.append(prodEl);
     }
-    const arrowRight = document.createElement("button");
-    const imgArrowRight = document.createElement("img");
-    imgArrowRight.src = "images/arrow-right.png";
-    imgArrowRight.className = "arrow-right";
-    arrowRight.append(imgArrowRight);
-    prodList.append(arrowRight);
     return prodList;
   }
 }
@@ -213,9 +189,6 @@ class Favourites {
 
   moveItemToCart(productDiv) {
     const singleItem = this.deleteProduct(productDiv);
-
-    //const cart = new ShoppingCart();
-    //cart.addProduct(singleProduct);
     this.cart.addProduct(singleItem);
   }
 
@@ -269,12 +242,10 @@ class ShoppingCart extends ProductList {
     console.log(this.items);
     this.renderCartItems();
     Modal.displayAddedToModal("Item added to cart");
-    this.cartCounter();
 
     this.sum = this.items.reduce((initialValue, currentItem) => {
       return initialValue + currentItem.price;
     }, 0);
-    //console.log(this.totalOutput);
     this.totalOutput.innerHTML = `Total: \$${this.sum}`;
     console.log(this.totalOutput);
   }
@@ -298,27 +269,7 @@ class ShoppingCart extends ProductList {
     this.sum = sum;
     this.totalOutput.innerHTML = `Total: \$${sum}`;
     console.log(this.totalOutput);
-    this.cartCounter();
     this.hideEmptyShoppingCart();
-  }
-
-  //Cart Counter
-  displayCartCounterCircle() {
-    const cartCounterCircle = document.getElementById("cart-counter-circle");
-    if (this.items.length > 0) {
-      cartCounterCircle.classList.remove("hidden");
-    } else if (this.items.length == 0) {
-      cartCounterCircle.classList.add("hidden");
-    }
-  }
-
-  cartCounter() {
-    const cartCounterCircle = document.getElementById("cart-counter-circle");
-    let cartCounterNum = document.createElement("p");
-    cartCounterCircle.append(cartCounterNum);
-    cartCounterNum.innerHTML = "";
-    cartCounterNum.innerHTML = this.items.length;
-    this.displayCartCounterCircle();
   }
 
   //Render Total in Cart
@@ -352,12 +303,6 @@ class ShoppingCart extends ProductList {
     let singleItem = document.createElement("div");
     itemsList.append(singleItem);
     this.items.forEach((item) => {
-      /*             const cartItemTemplate = document.getElementById('cart-item-template');
-            const cartItemBody = document.importNode(cartItemTemplate.content, true);
-            cartItemBody.querySelector('img').src = item.image;
-            cartItemBody.querySelector('.item-name-in-cart').textContent = item.title;
-            cartItemBody.querySelector('.item-price-in-cart').textContent = `\$${item.price}`;
-            singleItem.append(cartItemBody); */
       singleItem.id = item.id;
       singleItem.innerHTML = `
             <div class="single-item-in-cart">
@@ -497,8 +442,6 @@ class Shop {
     this.cart.render();
     this.favourites = new Favourites(this.cart);
     const productList = new ProductList();
-    //const womenProductList = new Women();
-    //womenProductList.render();
     const prodListElNewCollection = productList.renderNewCollection();
     const prodListElNewArrivals = productList.renderNewArrivals();
 
@@ -576,12 +519,21 @@ class Modal {
     modalOverlay.classList.toggle("hidden");
   }
 
+  static closeModal(section, sectionId) {
+    const modal = document.getElementById(`${section}-modal`);
+    const modalOverlay = document.getElementById(`${sectionId}`);
+
+    modal.className = "hidden";
+    modalOverlay.className = "hidden";
+  }
+
   static modalHandlerApp() {
     const cartModal = document.getElementById("cart-modal");
     const cartBtn = document.getElementById("cart-btn");
     const favouritesModal = document.getElementById("favourites-modal");
     const favouritesBtn = document.getElementById("favourites-btn");
 
+    // Open cart modal
     cartBtn.addEventListener(
       "click",
       this.modalHandler.bind(this, "cart", "shopping-cart-container")
@@ -591,6 +543,17 @@ class Modal {
       this.modalHandler.bind(this, "cart", "shopping-cart-container")
     );
 
+    // Close the favourites modal
+    cartBtn.addEventListener(
+      "click",
+      this.closeModal.bind(this, "favourites", "favourites-container")
+    );
+    cartModal.addEventListener(
+      "click",
+      this.closeModal.bind(this, "favourites", "favourites-container")
+    );
+
+    // Open favourites modal
     favouritesBtn.addEventListener(
       "click",
       this.modalHandler.bind(this, "favourites", "favourites-container")
@@ -598,6 +561,16 @@ class Modal {
     favouritesModal.addEventListener(
       "click",
       this.modalHandler.bind(this, "favourites", "favourites-container")
+    );
+
+    // Close cart modal
+    favouritesBtn.addEventListener(
+      "click",
+      this.closeModal.bind(this, "cart", "shopping-cart-container")
+    );
+    favouritesModal.addEventListener(
+      "click",
+      this.closeModal.bind(this, "cart", "shopping-cart-container")
     );
   }
 

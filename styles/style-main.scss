@@ -6,6 +6,7 @@ $primaryFont: rgba(39, 35, 35, 0.63);
   padding: 0;
   box-sizing: border-box;
   font-family: "Roboto", sans-serif;
+  overflow-x: hidden;
 }
 
 body {
@@ -46,14 +47,14 @@ header {
       #categories {
         display: flex;
         align-items: center;
-        padding: 1vw;
+        padding: 0 1vw;
 
         .categorie {
           list-style: none;
-          padding: 1vw;
+          padding: 0 1vw;
 
           button {
-            font-size: 3vw;
+            font-size: 120%;
             color: $primaryFont;
           }
         }
@@ -67,24 +68,13 @@ header {
         .menu-item {
           list-style: none;
           text-align: center;
+          vertical-align: middle;
 
-          a img,
           button img {
-            max-width: 60%;
+            width: 1.5vh;
+            margin: 0.2vw;
             height: auto;
-            vertical-align: middle;
             color: $primaryFont;
-          }
-
-          #cart-counter-circle {
-            width: 2vw;
-            height: 2vw;
-            position: absolute;
-            right: 2vw;
-            bottom: 2vh;
-            background-color: $blueBackground;
-            border-radius: 50px;
-            z-index: 5;
           }
         }
       }
@@ -260,12 +250,6 @@ header {
   color: $primaryFont;
 }
 
-.arrow-left,
-.arrow-right {
-  width: 4vw;
-  padding: 1vw;
-}
-
 .item-image {
   width: 27vw;
   filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.2));
@@ -277,7 +261,7 @@ header {
   justify-content: center;
 
   .item-card {
-    padding: 0.5vw;
+    padding: 1.5vw;
     list-style: none;
     width: min-content;
 
@@ -297,7 +281,15 @@ header {
       }
 
       .add-to-cart-btn {
+        width: 3vh;
         padding: 0 3px;
+        overflow: visible;
+      }
+
+      .add-to-favourites-btn {
+        width: 3vh;
+        padding: 0 3px;
+        overflow: visible;
       }
     }
   }
@@ -467,8 +459,10 @@ footer {
 
 #polygon-3 {
   position: absolute;
-  top: 39vw;
-  left: 10vw;
+  width: 50%;
+  top: 75vw;
+  left: 30%;
+  transform: translate(-30%);
   z-index: -1;
   animation-name: floating;
   -webkit-animation-name: floating;
@@ -482,8 +476,10 @@ footer {
 
 #polygon-4 {
   position: absolute;
-  top: 120vw;
-  left: 10vw;
+  width: 50%;
+  top: 140vw;
+  left: 30%;
+  transform: translate(-30%);
   z-index: -1;
   animation-name: floating;
   -webkit-animation-name: floating;
@@ -497,8 +493,10 @@ footer {
 
 #polygon-5 {
   position: absolute;
-  top: 170vw;
-  left: 2vw;
+  width: 50%;
+  top: 235vw;
+  left: 30%;
+  transform: translate(-30%);
   z-index: -1;
   animation-name: floating;
   -webkit-animation-name: floating;
@@ -530,6 +528,71 @@ footer {
   }
   100% {
     -webkit-transform: translateZ(0%);
+  }
+}
+
+/* Media queries */
+@media (min-width: 1200px) {
+  #home-page-btn {
+    padding: 0.5vw !important;
+  }
+
+  #menu {
+    button img {
+      width: 2.5vh !important;
+    }
+  }
+
+  #above-the-fold {
+    position: relative;
+    top: -8vh;
+    overflow: hidden;
+  }
+
+  #discover-more-button {
+    top: 41vw;
+    font-size: 1.5vw;
+    padding: 1.2vw;
+  }
+
+  .collections {
+    padding-top: 2vw;
+  }
+
+  .section-title {
+    font-size: 2vw;
+    padding-bottom: 1vw;
+  }
+
+  .item-card {
+    margin: 2vw;
+    width: 18% !important;
+
+    img {
+      width: fit-content;
+    }
+
+    .item-name,
+    .item-price {
+      font-size: 1vw !important;
+    }
+  }
+
+  .add-to-cart-btn img,
+  .add-to-favourites-btn img {
+    width: 2.5vh !important;
+  }
+
+  .review-card {
+    width: 25% !important;
+
+    h3 {
+      font-size: 2vw !important;
+    }
+
+    p {
+      font-size: 1.5vw !important;
+    }
   }
 }
 

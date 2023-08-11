@@ -3,6 +3,7 @@
   padding: 0;
   box-sizing: border-box;
   font-family: "Roboto", sans-serif;
+  overflow-x: hidden;
 }
 
 body {
@@ -40,14 +41,14 @@ header #nav-bar #menu-container {
 header #nav-bar #menu-container #categories {
   display: flex;
   align-items: center;
-  padding: 1vw;
+  padding: 0 1vw;
 }
 header #nav-bar #menu-container #categories .categorie {
   list-style: none;
-  padding: 1vw;
+  padding: 0 1vw;
 }
 header #nav-bar #menu-container #categories .categorie button {
-  font-size: 3vw;
+  font-size: 120%;
   color: rgba(39, 35, 35, 0.63);
 }
 header #nav-bar #menu-container #menu {
@@ -58,23 +59,13 @@ header #nav-bar #menu-container #menu {
 header #nav-bar #menu-container #menu .menu-item {
   list-style: none;
   text-align: center;
-}
-header #nav-bar #menu-container #menu .menu-item a img,
-header #nav-bar #menu-container #menu .menu-item button img {
-  max-width: 60%;
-  height: auto;
   vertical-align: middle;
-  color: rgba(39, 35, 35, 0.63);
 }
-header #nav-bar #menu-container #menu .menu-item #cart-counter-circle {
-  width: 2vw;
-  height: 2vw;
-  position: absolute;
-  right: 2vw;
-  bottom: 2vh;
-  background-color: rgb(98, 116, 136);
-  border-radius: 50px;
-  z-index: 5;
+header #nav-bar #menu-container #menu .menu-item button img {
+  width: 1.5vh;
+  margin: 0.2vw;
+  height: auto;
+  color: rgba(39, 35, 35, 0.63);
 }
 
 #cart-modal,
@@ -338,12 +329,6 @@ header #nav-bar #menu-container #menu .menu-item #cart-counter-circle {
   color: rgba(39, 35, 35, 0.63);
 }
 
-.arrow-left,
-.arrow-right {
-  width: 4vw;
-  padding: 1vw;
-}
-
 .item-image {
   width: 27vw;
   filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.2));
@@ -355,7 +340,7 @@ header #nav-bar #menu-container #menu .menu-item #cart-counter-circle {
   justify-content: center;
 }
 .item-cards .item-card {
-  padding: 0.5vw;
+  padding: 1.5vw;
   list-style: none;
   width: -moz-min-content;
   width: min-content;
@@ -375,7 +360,14 @@ header #nav-bar #menu-container #menu .menu-item #cart-counter-circle {
   color: rgba(39, 35, 35, 0.63);
 }
 .item-cards .item-card div .add-to-cart-btn {
+  width: 3vh;
   padding: 0 3px;
+  overflow: visible;
+}
+.item-cards .item-card div .add-to-favourites-btn {
+  width: 3vh;
+  padding: 0 3px;
+  overflow: visible;
 }
 
 .collections {
@@ -521,8 +513,10 @@ footer p {
 
 #polygon-3 {
   position: absolute;
-  top: 39vw;
-  left: 10vw;
+  width: 50%;
+  top: 75vw;
+  left: 30%;
+  transform: translate(-30%);
   z-index: -1;
   animation-name: floating;
   -webkit-animation-name: floating;
@@ -536,8 +530,10 @@ footer p {
 
 #polygon-4 {
   position: absolute;
-  top: 120vw;
-  left: 10vw;
+  width: 50%;
+  top: 140vw;
+  left: 30%;
+  transform: translate(-30%);
   z-index: -1;
   animation-name: floating;
   -webkit-animation-name: floating;
@@ -551,8 +547,10 @@ footer p {
 
 #polygon-5 {
   position: absolute;
-  top: 170vw;
-  left: 2vw;
+  width: 50%;
+  top: 235vw;
+  left: 30%;
+  transform: translate(-30%);
   z-index: -1;
   animation-name: floating;
   -webkit-animation-name: floating;
@@ -573,6 +571,57 @@ footer p {
   }
   100% {
     transform: translateZ(0%) rotate(-20deg);
+  }
+}
+/* Media queries */
+@media (min-width: 1200px) {
+  #home-page-btn {
+    padding: 0.5vw !important;
+  }
+  #menu button img {
+    width: 2.5vh !important;
+  }
+  #above-the-fold {
+    position: relative;
+    top: -8vh;
+    overflow: hidden;
+  }
+  #discover-more-button {
+    top: 41vw;
+    font-size: 1.5vw;
+    padding: 1.2vw;
+  }
+  .collections {
+    padding-top: 2vw;
+  }
+  .section-title {
+    font-size: 2vw;
+    padding-bottom: 1vw;
+  }
+  .item-card {
+    margin: 2vw;
+    width: 18% !important;
+  }
+  .item-card img {
+    width: -moz-fit-content;
+    width: fit-content;
+  }
+  .item-card .item-name,
+  .item-card .item-price {
+    font-size: 1vw !important;
+  }
+  .add-to-cart-btn img,
+  .add-to-favourites-btn img {
+    width: 2.5vh !important;
+  }
+  .review-card {
+    width: 25% !important;
+  }
+  .review-card h3 {
+    font-size: 2vw !important;
+  }
+  .review-card p {
+    font-size: 1.5vw !important;
   }
 }
 /* Accessories page style */
