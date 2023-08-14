@@ -126,6 +126,32 @@ class ProductList {
   }
 }
 
+class Search {
+  constructor() {
+    this.renderSearhcBar();
+    this.searchBarVisibility();
+  }
+
+  searchBarVisibility() {
+    const searchBtn = document.getElementById("search-btn");
+    searchBtn.addEventListener("click", this.toggleClassVisibility);
+  }
+
+  toggleClassVisibility() {
+    const searchBar = document.querySelector(".search-bar");
+    searchBar.classList.remove("hidden");
+  }
+
+  renderSearhcBar() {
+    let template = document.getElementById("search-template");
+    let clone = template.content.cloneNode(true);
+    const searchDiv = document.getElementById("search-div");
+    searchDiv.appendChild(clone);
+  }
+}
+
+const search = new Search();
+
 class Favourites {
   items = [];
 
@@ -220,8 +246,10 @@ class Favourites {
             <p class="item-price-in-favourites">\$${item.price}</p>
             </div>
             </div>
+            <div id="buttons">
             <button><img class="delete-button" src="images/delete.svg"></button>
             <button><img class="add-to-cart" src="images/cart.svg"></button>
+            </div>
             </div>
             `;
     });
@@ -237,9 +265,7 @@ class ShoppingCart extends ProductList {
   sum = 0;
 
   addProduct(product) {
-    console.log(this.items);
     this.items.push(product);
-    console.log(this.items);
     this.renderCartItems();
     Modal.displayAddedToModal("Item added to cart");
 

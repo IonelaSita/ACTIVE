@@ -2,17 +2,19 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
 }
 
 body {
-  background: #FFFFFF;
+  background: #ffffff;
 }
 
-#women-main, #men-main {
+#women-main,
+#men-main {
   padding: 0vw 5vw 5vw 5vw;
 
-  #women-header-img, #men-header-img {
+  #women-header-img,
+  #men-header-img {
     width: 100%;
     height: auto;
     padding: 3vw 0vw;
@@ -21,4 +23,14 @@ body {
 
 .collection {
   padding: 5vw;
+}
+
+@media (min-width: 1200px) {
+  #women-header-img,
+  #men-header-img {
+    width: 50% !important;
+    position: relative;
+    left: 50%;
+    transform: translate(-50%);
+  }
 }

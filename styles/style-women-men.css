@@ -6,13 +6,17 @@
 }
 
 body {
-  background: #FFFFFF;
+  background: #ffffff;
 }
 
-#women-main, #men-main {
+#women-main,
+#men-main {
   padding: 0vw 5vw 5vw 5vw;
 }
-#women-main #women-header-img, #women-main #men-header-img, #men-main #women-header-img, #men-main #men-header-img {
+#women-main #women-header-img,
+#women-main #men-header-img,
+#men-main #women-header-img,
+#men-main #men-header-img {
   width: 100%;
   height: auto;
   padding: 3vw 0vw;
@@ -20,4 +24,14 @@ body {
 
 .collection {
   padding: 5vw;
+}
+
+@media (min-width: 1200px) {
+  #women-header-img,
+  #men-header-img {
+    width: 50% !important;
+    position: relative;
+    left: 50%;
+    transform: translate(-50%);
+  }
 }/*# sourceMappingURL=style-women-men.css.map */

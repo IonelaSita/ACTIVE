@@ -6,14 +6,15 @@
 }
 
 body {
-  background: #FFFFFF;
+  background: #ffffff;
 }
 
 #about-main {
   padding: 0vw 5vw 5vw 5vw;
   color: rgba(39, 35, 35, 0.63);
 }
-#about-main #about-us, #about-main #values {
+#about-main #about-us,
+#about-main #values {
   padding: 10vw 0vw;
 }
 #about-main img {
@@ -45,7 +46,36 @@ body {
   width: 100%;
   justify-content: center;
 }
-#about-main .social-media #facebook, #about-main .social-media #instagram, #about-main .social-media #twitter {
+#about-main .social-media #facebook,
+#about-main .social-media #instagram,
+#about-main .social-media #twitter {
   padding: 2vw 7vw 4vw 7vw;
   transform: scale(0.8);
+}
+
+@media (min-width: 1200px) {
+  #about-us img {
+    width: 50vw;
+    float: right;
+    padding: 2vw;
+  }
+  #about-us h1 {
+    font-size: 5vh;
+  }
+  #about-us h3,
+  #about-us p {
+    font-size: 4vh;
+  }
+  #values img {
+    width: 50vw;
+    float: left;
+    padding: 2vw;
+  }
+  #values h1 {
+    font-size: 5vh;
+  }
+  #values h3,
+  #values p {
+    font-size: 4vh;
+  }
 }/*# sourceMappingURL=style-about.css.map */

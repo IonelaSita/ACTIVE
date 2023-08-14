@@ -1,58 +1,95 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
 }
 
 body {
-    background: #FFFFFF;
+  background: #ffffff;
 }
 
 #about-main {
-    padding: 0vw 5vw 5vw 5vw;
-    color: rgba(39, 35, 35, 0.63);
+  padding: 0vw 5vw 5vw 5vw;
+  color: rgba(39, 35, 35, 0.63);
 
-    #about-us, #values {
-        padding: 10vw 0vw;
+  #about-us,
+  #values {
+    padding: 10vw 0vw;
+  }
+
+  img {
+    width: 100%;
+    height: auto;
+    padding: 3vw 0vw;
+  }
+
+  h1 {
+    text-align: center;
+    font-size: 5vw;
+    font-weight: 500;
+    padding-bottom: 4vw;
+  }
+
+  h3 {
+    font-size: 4vw;
+    font-weight: 500;
+    padding-bottom: 1vw;
+  }
+
+  p {
+    font-size: 4vw;
+    font-weight: 300;
+    text-align: justify;
+    color: rgb(33, 30, 30);
+  }
+
+  .social-media {
+    list-style: none;
+    margin: auto;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+
+    #facebook,
+    #instagram,
+    #twitter {
+      padding: 2vw 7vw 4vw 7vw;
+      transform: scale(0.8);
     }
+  }
+}
 
+@media (min-width: 1200px) {
+  #about-us {
     img {
-        width: 100%;
-        height: auto;
-        padding: 3vw 0vw;
+      width: 50vw;
+      float: right;
+      padding: 2vw;
     }
-
     h1 {
-        text-align: center;
-        font-size: 5vw;
-        font-weight: 500;
-        padding-bottom: 4vw;
+      font-size: 5vh;
     }
 
-    h3 {
-        font-size: 4vw;
-        font-weight: 500;
-        padding-bottom: 1vw;
-    }
-
+    h3,
     p {
-        font-size: 4vw;
-        font-weight: 300;
-        text-align: justify;
-        color: rgb(33, 30, 30);
+      font-size: 4vh;
+    }
+  }
+
+  #values {
+    img {
+      width: 50vw;
+      float: left;
+      padding: 2vw;
+    }
+    h1 {
+      font-size: 5vh;
     }
 
-    .social-media {
-        list-style: none;
-            margin: auto;
-            display: flex;
-            width: 100%;
-            justify-content: center;
-
-            #facebook, #instagram, #twitter {
-                padding: 2vw 7vw 4vw 7vw;
-                transform: scale(0.8);
-            }
+    h3,
+    p {
+      font-size: 4vh;
     }
+  }
 }

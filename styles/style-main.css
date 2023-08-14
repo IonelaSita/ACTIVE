@@ -18,9 +18,9 @@ button {
 
 header #nav-bar {
   top: 0px;
-  z-index: 3;
+  z-index: 4;
   display: inline-flex;
-  position: sticky;
+  position: fixed;
   padding: 2px;
   width: 100%;
   justify-content: space-between;
@@ -60,6 +60,15 @@ header #nav-bar #menu-container #menu .menu-item {
   list-style: none;
   text-align: center;
   vertical-align: middle;
+  display: flex;
+}
+header #nav-bar #menu-container #menu .menu-item .search-bar {
+  width: 20vw;
+  vertical-align: middle;
+  border: solid 1px rgba(39, 35, 35, 0.63);
+  padding: 0.5vw;
+  margin-right: 0.5vw;
+  animation: fadeIn 1s;
 }
 header #nav-bar #menu-container #menu .menu-item button img {
   width: 1.5vh;
@@ -88,14 +97,14 @@ header #nav-bar #menu-container #menu .menu-item button img {
   position: fixed;
   bottom: 0;
   background-color: rgb(98, 116, 136);
-  font-size: 3vw;
+  font-size: 2vh;
   color: #ffffff;
-  padding: 2vw;
+  padding: 1vh;
   filter: drop-shadow(3px 3px 3px rgba(0, 0, 0, 0.2));
 }
 #modal-added-to-div #modal-added-to h3 {
   font-weight: 300;
-  padding: 0.8vw 20vw 0.8vw 20vw;
+  padding: 0.8vw 17vw 0.8vw 17vw;
 }
 
 .hidden {
@@ -104,32 +113,30 @@ header #nav-bar #menu-container #menu .menu-item button img {
 
 #shopping-cart-container,
 #favourites-container {
-  z-index: 4;
+  z-index: 3;
   background-color: #ffffff;
   position: fixed;
   right: 0;
-  width: 70%;
+  width: 60vw;
   height: 80%;
 }
 #shopping-cart-container .empty-list,
 #favourites-container .empty-list {
-  width: 30%;
+  width: 25%;
   margin: 15% 35% 15% 35%;
 }
 #shopping-cart-container h3,
 #favourites-container h3 {
   text-align: center;
-  margin-bottom: 15vw;
   color: rgba(39, 35, 35, 0.63);
   font-weight: 400;
-  font-size: 3.5vw;
+  font-size: 2vh;
 }
 #shopping-cart-container #cart-prod-list,
 #shopping-cart-container #favourites-prod-list,
 #favourites-container #cart-prod-list,
 #favourites-container #favourites-prod-list {
-  padding: 5vw;
-  margin-left: 3vw;
+  padding: 3vw 0 1vw 0;
 }
 #shopping-cart-container #cart-prod-list h2,
 #shopping-cart-container #favourites-prod-list h2,
@@ -137,10 +144,11 @@ header #nav-bar #menu-container #menu .menu-item button img {
 #favourites-container #favourites-prod-list h2 {
   color: rgba(39, 35, 35, 0.63);
   font-weight: 400;
-  font-size: 4vw;
+  font-size: 3vh;
   width: 100%;
   text-align: center;
-  padding-bottom: 7vw;
+  margin-top: 7vh;
+  padding-bottom: 2vw;
 }
 #shopping-cart-container #cart-prod-list .single-item-in-cart,
 #shopping-cart-container #cart-prod-list .single-item-in-favourites,
@@ -151,7 +159,7 @@ header #nav-bar #menu-container #menu .menu-item button img {
 #favourites-container #favourites-prod-list .single-item-in-cart,
 #favourites-container #favourites-prod-list .single-item-in-favourites {
   display: flex;
-  margin: 2vw 0;
+  margin: 1.5vw;
   justify-content: space-between;
 }
 #shopping-cart-container #cart-prod-list .single-item-in-cart .image-title-price,
@@ -180,7 +188,9 @@ header #nav-bar #menu-container #menu .menu-item button img {
 #favourites-container #favourites-prod-list .single-item-in-cart .image-title-price .item-image-in-favourites,
 #favourites-container #favourites-prod-list .single-item-in-favourites .image-title-price .item-image-in-cart,
 #favourites-container #favourites-prod-list .single-item-in-favourites .image-title-price .item-image-in-favourites {
-  width: 12vw;
+  width: 6vh;
+  -o-object-fit: scale-down;
+     object-fit: scale-down;
   filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.2));
 }
 #shopping-cart-container #cart-prod-list .single-item-in-cart .image-title-price .title-price-in-cart,
@@ -199,7 +209,7 @@ header #nav-bar #menu-container #menu .menu-item button img {
 #favourites-container #favourites-prod-list .single-item-in-cart .image-title-price .title-price-in-favourites,
 #favourites-container #favourites-prod-list .single-item-in-favourites .image-title-price .title-price-in-cart,
 #favourites-container #favourites-prod-list .single-item-in-favourites .image-title-price .title-price-in-favourites {
-  padding: 4vw;
+  padding: 4vh;
   margin: auto;
 }
 #shopping-cart-container #cart-prod-list .single-item-in-cart .image-title-price .title-price-in-cart .item-name-in-cart,
@@ -234,7 +244,7 @@ header #nav-bar #menu-container #menu .menu-item button img {
 #favourites-container #favourites-prod-list .single-item-in-favourites .image-title-price .title-price-in-cart .item-name-in-favourites,
 #favourites-container #favourites-prod-list .single-item-in-favourites .image-title-price .title-price-in-favourites .item-name-in-cart,
 #favourites-container #favourites-prod-list .single-item-in-favourites .image-title-price .title-price-in-favourites .item-name-in-favourites {
-  font-size: 1.8vw;
+  font-size: 1.8vh;
   color: rgba(39, 35, 35, 0.63);
 }
 #shopping-cart-container #cart-prod-list .single-item-in-cart .image-title-price .title-price-in-cart .item-price-in-cart,
@@ -269,31 +279,60 @@ header #nav-bar #menu-container #menu .menu-item button img {
 #favourites-container #favourites-prod-list .single-item-in-favourites .image-title-price .title-price-in-cart .item-price-in-favourites,
 #favourites-container #favourites-prod-list .single-item-in-favourites .image-title-price .title-price-in-favourites .item-price-in-cart,
 #favourites-container #favourites-prod-list .single-item-in-favourites .image-title-price .title-price-in-favourites .item-price-in-favourites {
-  font-size: 2vw;
+  font-size: 2vh;
   color: rgba(39, 35, 35, 0.63);
   font-weight: bold;
 }
+#shopping-cart-container #cart-prod-list .single-item-in-cart #buttons,
+#shopping-cart-container #cart-prod-list .single-item-in-favourites #buttons,
+#shopping-cart-container #favourites-prod-list .single-item-in-cart #buttons,
+#shopping-cart-container #favourites-prod-list .single-item-in-favourites #buttons,
+#favourites-container #cart-prod-list .single-item-in-cart #buttons,
+#favourites-container #cart-prod-list .single-item-in-favourites #buttons,
+#favourites-container #favourites-prod-list .single-item-in-cart #buttons,
+#favourites-container #favourites-prod-list .single-item-in-favourites #buttons {
+  display: flex;
+  padding: 1vw;
+}
+#shopping-cart-container #cart-prod-list .single-item-in-cart #buttons button,
+#shopping-cart-container #cart-prod-list .single-item-in-favourites #buttons button,
+#shopping-cart-container #favourites-prod-list .single-item-in-cart #buttons button,
+#shopping-cart-container #favourites-prod-list .single-item-in-favourites #buttons button,
+#favourites-container #cart-prod-list .single-item-in-cart #buttons button,
+#favourites-container #cart-prod-list .single-item-in-favourites #buttons button,
+#favourites-container #favourites-prod-list .single-item-in-cart #buttons button,
+#favourites-container #favourites-prod-list .single-item-in-favourites #buttons button {
+  padding: 0.5vw;
+}
+#shopping-cart-container #cart-prod-list .single-item-in-cart #buttons button:last-of-type img,
+#shopping-cart-container #cart-prod-list .single-item-in-favourites #buttons button:last-of-type img,
+#shopping-cart-container #favourites-prod-list .single-item-in-cart #buttons button:last-of-type img,
+#shopping-cart-container #favourites-prod-list .single-item-in-favourites #buttons button:last-of-type img,
+#favourites-container #cart-prod-list .single-item-in-cart #buttons button:last-of-type img,
+#favourites-container #cart-prod-list .single-item-in-favourites #buttons button:last-of-type img,
+#favourites-container #favourites-prod-list .single-item-in-cart #buttons button:last-of-type img,
+#favourites-container #favourites-prod-list .single-item-in-favourites #buttons button:last-of-type img {
+  width: 24px;
+}
 #shopping-cart-container h2,
 #favourites-container h2 {
-  text-align: end;
-  font-size: 4vw;
   font-weight: 400;
-  padding: 2vw;
-  width: 65%;
+  padding: 3vw 2vw 2vw 4vw;
   color: rgba(39, 35, 35, 0.63);
 }
 
 .cart {
   display: flex;
+  justify-content: space-between;
   margin: auto;
 }
 .cart button {
   background-color: rgb(98, 116, 136);
   color: #ffffff;
-  padding: 2vw;
-  margin: 2vw;
+  padding: 1.5vw;
+  margin: 2vw 4vw 2vw 2vw;
   box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.25);
-  font-size: 3vw;
+  font-size: 2vh;
   font-weight: 400;
 }
 .cart button img {
@@ -302,6 +341,7 @@ header #nav-bar #menu-container #menu .menu-item button img {
 
 #above-the-fold img {
   max-width: 100%;
+  margin-top: 7vw;
   height: auto;
 }
 
@@ -313,8 +353,8 @@ header #nav-bar #menu-container #menu .menu-item button img {
   text-decoration: none;
   padding: 1.7vw;
   position: absolute;
-  left: 8vw;
-  top: 56vw;
+  left: 8.5vw;
+  top: 48vw;
   background: #ffffff;
   box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.25);
   font-size: 3vw;
@@ -344,6 +384,7 @@ header #nav-bar #menu-container #menu .menu-item button img {
   list-style: none;
   width: -moz-min-content;
   width: min-content;
+  cursor: pointer;
 }
 .item-cards .item-card div {
   display: inline-flex;
@@ -368,6 +409,10 @@ header #nav-bar #menu-container #menu .menu-item button img {
   width: 3vh;
   padding: 0 3px;
   overflow: visible;
+}
+.item-cards .item-card:hover {
+  transition: all 0.2s ease-in-out;
+  transform: scale(1.1);
 }
 
 .collections {
@@ -429,7 +474,7 @@ header #nav-bar #menu-container #menu .menu-item button img {
 #contact div #email {
   display: inline-flex;
   padding: 2vw;
-  width: 100vw;
+  width: 80vw;
   justify-content: center;
 }
 #contact div #email #line {
@@ -445,28 +490,30 @@ header #nav-bar #menu-container #menu .menu-item button img {
 #contact div #email div h3 {
   font-style: normal;
   font-weight: 500;
-  font-size: 4vw;
+  font-size: 2vw;
   padding-right: 2vw;
   margin-bottom: 2px;
   align-self: center;
 }
 #contact div #email div #btn-in {
-  width: 58vw;
   background: #ffffff;
   display: inline-flex;
+  width: 60vw;
 }
 #contact div #email div #btn-in input {
   border: none;
   padding: 2vw;
-  width: 52vw;
-  font-size: 3vw;
+  width: 55vw;
+  font-size: 2vw;
   font-weight: 500;
   opacity: 80%;
 }
 #contact div #email div #btn-in button {
   margin-top: auto;
   margin-bottom: auto;
-  transform: scale(0.5);
+  padding-right: 2vw;
+  width: 3vw;
+  overflow: visible;
 }
 #contact div .social-media {
   list-style: none;
@@ -479,7 +526,11 @@ header #nav-bar #menu-container #menu .menu-item button img {
 #contact div .social-media #instagram,
 #contact div .social-media #twitter {
   padding: 2vw 3vw 4vw 3vw;
-  transform: scale(0.5);
+}
+#contact div .social-media #facebook img,
+#contact div .social-media #instagram img,
+#contact div .social-media #twitter img {
+  width: 3vw;
 }
 
 footer {
@@ -573,7 +624,24 @@ footer p {
     transform: translateZ(0%) rotate(-20deg);
   }
 }
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    margin-right: -400px;
+  }
+  100% {
+    opacity: 1;
+    margin-right: 0;
+  }
+}
 /* Media queries */
+@media (max-width: 650px) {
+  #above-the-fold {
+    position: relative;
+    top: 3vw;
+    overflow: hidden;
+  }
+}
 @media (min-width: 1200px) {
   #home-page-btn {
     padding: 0.5vw !important;
@@ -583,11 +651,10 @@ footer p {
   }
   #above-the-fold {
     position: relative;
-    top: -8vh;
+    top: -7.7vh;
     overflow: hidden;
   }
   #discover-more-button {
-    top: 41vw;
     font-size: 1.5vw;
     padding: 1.2vw;
   }
@@ -603,8 +670,7 @@ footer p {
     width: 18% !important;
   }
   .item-card img {
-    width: -moz-fit-content;
-    width: fit-content;
+    width: 100%;
   }
   .item-card .item-name,
   .item-card .item-price {
@@ -623,10 +689,35 @@ footer p {
   .review-card p {
     font-size: 1.5vw !important;
   }
+  footer {
+    padding-bottom: 0;
+  }
+  footer #footer-menu li button {
+    font-size: 1.5vw !important;
+  }
+  footer p {
+    font-size: 1.5vw !important;
+    padding: 2vw 0vw;
+  }
+  #polygon-3 {
+    top: 67vw;
+  }
+  #polygon-4 {
+    top: 110vw;
+  }
+  #polygon-5 {
+    top: 180vw;
+  }
+  #shopping-cart-container,
+  #favourites-container {
+    width: 65vh;
+    height: 85%;
+  }
 }
 /* Accessories page style */
 #page-under-construction {
   height: 25vh;
+  margin-top: 5vw;
   display: flex;
   justify-content: center;
   align-items: center;
