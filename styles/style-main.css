@@ -379,12 +379,19 @@ header #nav-bar #menu-container #menu .menu-item button img {
   width: 100%;
   justify-content: center;
 }
+.item-cards::-webkit-scrollbar {
+  display: none;
+}
 .item-cards .item-card {
   padding: 1.5vw;
   list-style: none;
   width: -moz-min-content;
   width: min-content;
   cursor: pointer;
+}
+.item-cards .item-card:hover {
+  transition: all 0.2s ease-in-out;
+  transform: scale(1.03);
 }
 .item-cards .item-card div {
   display: inline-flex;
@@ -409,10 +416,6 @@ header #nav-bar #menu-container #menu .menu-item button img {
   width: 3vh;
   padding: 0 3px;
   overflow: visible;
-}
-.item-cards .item-card:hover {
-  transition: all 0.2s ease-in-out;
-  transform: scale(1.1);
 }
 
 .collections {
@@ -562,7 +565,7 @@ footer p {
   padding: 8vw 0vw 2vw 0vw;
 }
 
-#polygon-3 {
+#polygon-3, #polygon-5, #polygon-4 {
   position: absolute;
   width: 50%;
   top: 75vw;
@@ -580,37 +583,11 @@ footer p {
 }
 
 #polygon-4 {
-  position: absolute;
-  width: 50%;
   top: 140vw;
-  left: 30%;
-  transform: translate(-30%);
-  z-index: -1;
-  animation-name: floating;
-  -webkit-animation-name: floating;
-  animation-duration: 5s;
-  -webkit-animation-duration: 5s;
-  animation-direction: alternate;
-  -webkit-animation-direction: 5s;
-  animation-iteration-count: infinite;
-  -webkit-animation-iteration-count: infinite;
 }
 
 #polygon-5 {
-  position: absolute;
-  width: 50%;
   top: 235vw;
-  left: 30%;
-  transform: translate(-30%);
-  z-index: -1;
-  animation-name: floating;
-  -webkit-animation-name: floating;
-  animation-duration: 5s;
-  -webkit-animation-duration: 5s;
-  animation-direction: alternate;
-  -webkit-animation-direction: 5s;
-  animation-iteration-count: infinite;
-  -webkit-animation-iteration-count: infinite;
 }
 
 @keyframes floating {
@@ -699,7 +676,7 @@ footer p {
     font-size: 1.5vw !important;
     padding: 2vw 0vw;
   }
-  #polygon-3 {
+  #polygon-3, #polygon-4, #polygon-5 {
     top: 67vw;
   }
   #polygon-4 {

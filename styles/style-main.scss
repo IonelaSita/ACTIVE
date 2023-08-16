@@ -284,12 +284,20 @@ header {
   display: inline-flex;
   width: 100%;
   justify-content: center;
+  &::-webkit-scrollbar {
+    display: none;
+  }
 
   .item-card {
     padding: 1.5vw;
     list-style: none;
     width: min-content;
     cursor: pointer;
+
+    &:hover {
+      transition: all 0.2s ease-in-out;
+      transform: scale(1.03);
+    }
 
     div {
       display: inline-flex;
@@ -318,11 +326,6 @@ header {
         overflow: visible;
       }
     }
-  }
-
-  .item-card:hover {
-    transition: all 0.2s ease-in-out;
-    transform: scale(1.1);
   }
 }
 
@@ -510,12 +513,12 @@ footer {
 }
 
 #polygon-4 {
-  @extend polygon-3;
+  @extend #polygon-3;
   top: 140vw;
 }
 
 #polygon-5 {
-  @extend polygon-3;
+  @extend #polygon-3;
   top: 235vw;
 }
 
