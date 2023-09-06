@@ -75,8 +75,7 @@
   border: solid 1px rgba(39, 35, 35, 0.63);
   border-radius: 0;
 }
-.account input:hover,
-.account input:focus {
+.account input:hover, .account input:focus {
   outline-color: rgb(98, 116, 136);
   border: 2px solid rgb(98, 116, 136);
   border-radius: 0;
@@ -107,4 +106,4 @@
   #sign-up-div {
     width: 40%;
   }
-}/*# sourceMappingURL=style-profile.css.map */
+}/*# sourceMappingURL=profile.css.map */

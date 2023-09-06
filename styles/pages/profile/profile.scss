@@ -1,5 +1,4 @@
-$blueBackground: rgba(98, 116, 136, 1);
-$primaryFont: rgba(39, 35, 35, 0.63);
+@use "../../abstracts" as *;
 
 * {
   margin: 0;
@@ -37,8 +36,7 @@ $primaryFont: rgba(39, 35, 35, 0.63);
 
     div {
       width: 100%;
-      display: flex;
-      justify-content: space-between;
+      @include space-between(flex);
       flex-direction: row;
       margin: 0;
 
@@ -52,7 +50,7 @@ $primaryFont: rgba(39, 35, 35, 0.63);
 
       .selected {
         background-color: $blueBackground;
-        color: #ffffff;
+        color: $white;
       }
     }
   }
@@ -86,13 +84,12 @@ $primaryFont: rgba(39, 35, 35, 0.63);
   input {
     border: solid 1px $primaryFont;
     border-radius: 0;
-  }
-
-  input:hover,
-  input:focus {
-    outline-color: $blueBackground;
-    border: 2px solid $blueBackground;
-    border-radius: 0;
+    &:hover,
+    &:focus {
+      outline-color: $blueBackground;
+      border: 2px solid $blueBackground;
+      border-radius: 0;
+    }
   }
 
   #checkbox {
@@ -103,7 +100,7 @@ $primaryFont: rgba(39, 35, 35, 0.63);
 
   .submit-button {
     background-color: $blueBackground;
-    color: #ffffff;
+    color: $white;
     margin-top: 3vh;
     padding: 10px;
     font-size: 1.8vh;

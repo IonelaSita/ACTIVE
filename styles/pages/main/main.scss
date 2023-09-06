@@ -1,5 +1,4 @@
-$blueBackground: rgba(98, 116, 136, 1);
-$primaryFont: rgba(39, 35, 35, 0.63);
+@use "../../abstracts" as *;
 
 * {
   margin: 0;
@@ -10,7 +9,7 @@ $primaryFont: rgba(39, 35, 35, 0.63);
 }
 
 body {
-  background: #ffffff;
+  background: $white;
 }
 
 button {
@@ -21,14 +20,13 @@ button {
 
 header {
   #nav-bar {
+    @include space-between(inline-flex);
     top: 0px;
     z-index: 4;
-    display: inline-flex;
     position: fixed;
     padding: 2px;
     width: 100%;
-    justify-content: space-between;
-    background-color: #ffffff;
+    background: $white;
 
     #home-page-btn {
       width: auto;
@@ -41,8 +39,7 @@ header {
     }
 
     #menu-container {
-      display: inline-flex;
-      justify-content: space-between;
+      @include space-between(inline-flex);
 
       #categories {
         display: flex;
@@ -102,7 +99,6 @@ header {
 }
 
 #modal-added-to-div {
-  display: inline-flex;
   align-content: baseline;
   display: flex;
   justify-content: center;
@@ -113,7 +109,7 @@ header {
     bottom: 0;
     background-color: $blueBackground;
     font-size: 2vh;
-    color: #ffffff;
+    color: $white;
     padding: 1vh;
     filter: drop-shadow(3px 3px 3px rgba(0.2, 0.2, 0.2, 0.2));
 
@@ -131,7 +127,7 @@ header {
 #shopping-cart-container,
 #favourites-container {
   z-index: 3;
-  background-color: #ffffff;
+  background-color: $white;
   position: fixed;
   right: 0;
   width: 60vw;
@@ -165,9 +161,8 @@ header {
 
     .single-item-in-cart,
     .single-item-in-favourites {
-      display: flex;
+      @include space-between(flex);
       margin: 1.5vw;
-      justify-content: space-between;
 
       .image-title-price {
         display: inline-flex;
@@ -224,13 +219,12 @@ header {
 }
 
 .cart {
-  display: flex;
-  justify-content: space-between;
+  @include space-between(flex);
   margin: auto;
 
   button {
     background-color: $blueBackground;
-    color: #ffffff;
+    color: $white;
     padding: 1.5vw;
     margin: 2vw 4vw 2vw 2vw;
     box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.25);
@@ -261,7 +255,7 @@ header {
   position: absolute;
   left: 8.5vw;
   top: 48vw;
-  background: #ffffff;
+  background: $white;
   box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.25);
   font-size: 3vw;
   color: $primaryFont;
@@ -300,9 +294,8 @@ header {
     }
 
     div {
-      display: inline-flex;
+      @include space-between(inline-flex);
       width: 100%;
-      justify-content: space-between;
 
       div {
         display: block;
@@ -337,12 +330,12 @@ header {
 
 #reviews {
   background-color: $blueBackground;
-  color: #ffffff;
+  color: $white;
   padding-top: 4vw;
   margin-top: 10vw;
 
   .section-title {
-    color: #ffffff;
+    color: $white;
   }
 
   #review-cards {
@@ -417,7 +410,7 @@ header {
         }
 
         #btn-in {
-          background: #ffffff;
+          background: $white;
           display: inline-flex;
           width: 60vw;
 
@@ -465,8 +458,7 @@ footer {
   color: $primaryFont;
 
   #footer {
-    display: flex;
-    justify-content: space-between;
+    @include space-between(flex);
 
     img {
       width: auto;
@@ -495,7 +487,7 @@ footer {
   }
 }
 
-#polygon-3 {
+.polygons {
   position: absolute;
   width: 50%;
   top: 75vw;
@@ -512,13 +504,18 @@ footer {
   -webkit-animation-iteration-count: infinite;
 }
 
+#polygon-3 {
+  @extend .polygons;
+  top: 75vw;
+}
+
 #polygon-4 {
-  @extend #polygon-3;
+  @extend .polygons;
   top: 140vw;
 }
 
 #polygon-5 {
-  @extend #polygon-3;
+  @extend .polygons;
   top: 235vw;
 }
 
@@ -671,7 +668,7 @@ footer {
   background-color: $blueBackground;
 
   h1 {
-    color: #ffffff;
+    color: $white;
     font-weight: 300;
   }
   img {

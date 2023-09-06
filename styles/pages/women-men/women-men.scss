@@ -1,3 +1,5 @@
+@use "../../abstracts" as *;
+
 * {
   margin: 0;
   padding: 0;
@@ -6,20 +8,19 @@
 }
 
 body {
-  background: #ffffff;
+  background: $white;
 }
 
 #women-main,
 #men-main {
   padding: 0vw 5vw 5vw 5vw;
-}
-#women-main #women-header-img,
-#women-main #men-header-img,
-#men-main #women-header-img,
-#men-main #men-header-img {
-  width: 100%;
-  height: auto;
-  padding: 3vw 0vw;
+
+  #women-header-img,
+  #men-header-img {
+    width: 100%;
+    height: auto;
+    padding: 3vw 0vw;
+  }
 }
 
 .collection {
@@ -34,4 +35,4 @@ body {
     left: 50%;
     transform: translate(-50%);
   }
-}/*# sourceMappingURL=style-women-men.css.map */
+}

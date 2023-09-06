@@ -17,14 +17,14 @@ button {
 }
 
 header #nav-bar {
+  display: inline-flex;
+  justify-content: space-between;
   top: 0px;
   z-index: 4;
-  display: inline-flex;
   position: fixed;
   padding: 2px;
   width: 100%;
-  justify-content: space-between;
-  background-color: #ffffff;
+  background: #ffffff;
 }
 header #nav-bar #home-page-btn {
   width: auto;
@@ -87,7 +87,6 @@ header #nav-bar #menu-container #menu .menu-item button img {
 }
 
 #modal-added-to-div {
-  display: inline-flex;
   align-content: baseline;
   display: flex;
   justify-content: center;
@@ -159,8 +158,8 @@ header #nav-bar #menu-container #menu .menu-item button img {
 #favourites-container #favourites-prod-list .single-item-in-cart,
 #favourites-container #favourites-prod-list .single-item-in-favourites {
   display: flex;
-  margin: 1.5vw;
   justify-content: space-between;
+  margin: 1.5vw;
 }
 #shopping-cart-container #cart-prod-list .single-item-in-cart .image-title-price,
 #shopping-cart-container #cart-prod-list .single-item-in-favourites .image-title-price,
@@ -395,8 +394,8 @@ header #nav-bar #menu-container #menu .menu-item button img {
 }
 .item-cards .item-card div {
   display: inline-flex;
-  width: 100%;
   justify-content: space-between;
+  width: 100%;
 }
 .item-cards .item-card div div {
   display: block;
@@ -565,7 +564,7 @@ footer p {
   padding: 8vw 0vw 2vw 0vw;
 }
 
-#polygon-3, #polygon-5, #polygon-4 {
+.polygons, #polygon-5, #polygon-4, #polygon-3 {
   position: absolute;
   width: 50%;
   top: 75vw;
@@ -580,6 +579,10 @@ footer p {
   -webkit-animation-direction: 5s;
   animation-iteration-count: infinite;
   -webkit-animation-iteration-count: infinite;
+}
+
+#polygon-3 {
+  top: 75vw;
 }
 
 #polygon-4 {
@@ -676,7 +679,7 @@ footer p {
     font-size: 1.5vw !important;
     padding: 2vw 0vw;
   }
-  #polygon-3, #polygon-4, #polygon-5 {
+  #polygon-3 {
     top: 67vw;
   }
   #polygon-4 {
@@ -706,4 +709,4 @@ footer p {
 }
 #page-under-construction img {
   padding: 5px;
-}/*# sourceMappingURL=style-main.css.map */
+}/*# sourceMappingURL=main.css.map */
